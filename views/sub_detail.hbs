@@ -1,0 +1,953 @@
+{{#if (isEquals isMobile 1 )}}
+  <div class="m_container">
+    {{>hd}}
+    <div class="sub_detail">
+      {{#each info}}
+        <div class="imgs_area swiper-container">
+          {{#unless (isEmpty video_url)}}<img src="/static/images/icon/ico_medal.png" alt="차대리인증" width="40" class="ico_medal" />{{/unless}}
+          <div class="swiper-wrapper">
+            {{#if (isEmpty ../images)}}
+              <div class="swiper-slide">
+                <img src="{{../static}}cars/{{img_url}}" alt="" class="img_thumbnail" />
+              </div>
+            {{else}}
+              {{#each ../images}}
+                <div class="swiper-slide">
+                  <img src="{{../../static}}item_images/{{../img_url}}/{{this}}" alt="" class="img_thumbnail" />
+                </div>
+              {{/each}}
+            {{/if}}
+          </div>
+
+          <div class="swiper-pagination"></div>
+          {{#if (isEquals ../isMobile 0)}}
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          {{/if}}
+        </div>
+
+        <div class="item_info" style="border-bottom: 1px solid #b1b1b1;">
+          <p class="tit"><strong>{{model}}</strong></p>
+          <p class="info">
+            {{{year}}}년형
+            <span class="split">|</span>
+            {{#if (isEquals fuel 'G') }}가솔린{{else if (isEquals fuel 'D')}}디젤{{else if (isEquals fuel 'H')}}하이브리드{{else if (isEquals fuel 'E')}}전기{{else if (isEquals fuel 'L')}}LPG{{else}}?{{/if}}
+            <span class="split">|</span>
+            {{comma-number kilo}}km
+          </p>
+
+          <p class="badge_area clearfix">
+            {{#unless (isEmpty video_url)}}<span class="badge">차대리인증</span>&nbsp;{{/unless}}
+            <span class="badge">할인가능</span>&nbsp;
+            {{! todo 조건에 따라서 뱃지 이름을 변경하거나 없앤다. }}
+            <!--<span class="badge">신차급</span>-->
+            {{#if (isEquals sold 1)}}<span class="badge ico_sold">거래완료</span>{{/if}}
+            <a href="javascript:alert('신고하기 기능은 준비중입니다.');" class="btn_alert_item_m">
+              <img src="/static/images/sub/btn_alert_item.jpg" alt="신고하기" width="80" />
+            </a>
+          </p>
+
+          <table class="table tb_price_info_m">
+            <tr>
+              <td class="price_section">
+                <span class="txt">상품 시작가</span><br />
+                <strong class="price">{{price}}</strong>
+                <span class="unit">만원</span>
+              </td>
+              <td>
+                <span class="txt">총예상비용 (대략)</span><br />
+                <strong class="price">~ {{amountPrice price type_id fuel}}</strong>
+                <span class="unit">만원이하</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="center req_lowprice_wrp_m">
+          <a href="/request/2dealer/{{id}}" class="btn_low_price_m" target="_blank">
+            "차주"에게 <strong>"최저가"</strong>를 물어봐!!
+            <i class="glyphicon glyphicon-menu-right"></i>
+          </a>
+        </div>
+
+        <div class="btn_req_area_m {{#if (isEmpty blog_url)}}btn-2-req{{else}}btn-3-req{{/if}} clearfix">
+          {{#if (isEmpty blog_url)}}
+            <a href="https://talk.naver.com/ct/wc4ktq" class="btn_req_m btn-talk-req-m" target="_blank">
+              <i class="ico_talktalk_m"><img src="/static/images/sub/mobile/bl_talktalk.gif" alt="" width="20" /></i>
+              톡톡
+            </a>
+            <a href="http://plus.kakao.com/home/ov0qv67l" class="btn_req_m btn-plus-req-m" target="_blank">
+              <i class="ico_talktalk_m"><img src="/static/images/sub/mobile/bl_pluschingu.gif" alt="" width="23" /></i>
+              플친
+            </a>
+          {{else}}
+            <a href="http://blog.naver.com/chadaeli/{{blog_url}}" class="btn_req_m btn-blog-req-m" target="_blank">
+              <i class="ico_talktalk_m"><img src="/static/images/sub/mobile/bl_blog.gif" alt="" width="20" /></i>
+              블로그
+            </a>
+            <a href="https://talk.naver.com/ct/wc4ktq" class="btn_req_m btn-talk-req-m" target="_blank">
+              <i class="ico_talktalk_m"><img src="/static/images/sub/mobile/bl_talktalk.gif" alt="" width="20" /></i>
+              톡톡
+            </a>
+            <a href="http://plus.kakao.com/home/ov0qv67l" class="btn_req_m btn-plus-req-m" target="_blank">
+              <i class="ico_talktalk_m"><img src="/static/images/sub/mobile/bl_pluschingu.gif" alt="" width="23" /></i>
+              플친
+            </a>
+          {{/if}}
+
+        </div>
+
+        <div style="padding: 0 15px;">
+          <a href="tel:16008218" class="btn-customer-req-m">
+            <i class="ico_talktalk_m"><img src="/static/images/sub/mobile/bl_tel.gif" alt="" width="23" /></i>
+            고객센터 1600-8218
+          </a>
+        </div>
+
+
+
+      <!--{{#unless (isEmpty blog_url)}}-->
+        <!--<div class="info-btn-area">-->
+          <!--<a href="http://blog.naver.com/chadaeli/{{blog_url}}" class="btn-blog-info" target="_blank">-->
+            <!--네이버 블로그에서 보기-->
+          <!--</a>-->
+        <!--</div>-->
+      <!--{{/unless}}-->
+
+      <!--{{#if video_url}}-->
+        <!--<div class="video_section">-->
+          <!--<iframe class="iframe_video" width="100%" src="https://www.youtube.com/embed/{{video_url}}?autoplay=0&rel=0&showinfo=1&controls=1&autohide=1&theme=light&disablekb=1&modestbranding=1" frameborder="0" allowfullscreen></iframe>-->
+        <!--</div>-->
+      <!--{{/if}}-->
+
+      <div class="basic_info basic_item_m">
+        {{#unless (isEmpty video_url)}}<h3 class="tit">상품 인증 동영상 및 상사정보</h3>
+        {{else}}<h3 class="tit">상품 소유 상사 정보</h3>
+        {{/unless}}
+
+        <div>
+          {{#if (isEmpty video_url)}}
+            <img src="{{../static}}cars/{{img_url}}" alt="" width="100%" />
+          {{else}}
+            <div class="video_section">
+              <iframe class="iframe_video" width="100%" src="https://www.youtube.com/embed/{{video_url}}?autoplay=0&rel=0&showinfo=1&controls=1&autohide=1&theme=light&disablekb=1&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+          {{/if}}
+
+          <div class="dealer_info dealer_info_m">
+            <table class="tb_store_info table">
+              <tr>
+                <th>시도 / 지역</th>
+                <td>{{province}} / {{region}}</td>
+              </tr>
+              <tr>
+                <th>상사명</th>
+                <td>{{store_name}}</td>
+              </tr>
+              <tr>
+                <th>대표명</th>
+                <td>{{ceo_name}}</td>
+              </tr>
+              {{#if (isEquals level 'S')}}
+                <tr>
+                  <th>대표 연락처</th>
+                  <td><a href="tel:{{ceo_tel}}">{{ceo_tel}}</a></td>
+                </tr>
+              {{else}}
+                <tr>
+                  <th>고객센터</th>
+                  <td><a href="tel:16008218">1600-8218</a></td>
+                </tr>
+              {{/if}}
+            </table>
+            {{#if (isEquals level 'S')}}
+              <span class="special_store_badge_m"><img src="/static/images/sub/badge_special_store.jpg" alt="" width="100" /></span>
+            {{else}}
+              <span class="general_store_badge_m"><img src="/static/images/sub/badge_general_store.jpg" alt="" width="80" /></span>
+            {{/if}}
+
+            {{#if (isEquals level 'S')}}
+              <div class="home_link_area_m">
+                <a href="/store/{{eng_name}}" target="_blank">
+                  <img src="/static/images/sub/btn_special_store_home.jpg" alt="특별제휴상사 홈페이지" width="100%" />
+                </a>
+              </div>
+            {{/if}}
+          </div>
+
+        </div>
+      </div>
+
+        <div class="basic_info basic_item_m">
+          <h3 class="tit">상품 기본 정보</h3>
+          <table class="table table_info">
+            <tr>
+              <th class="bold align-left">형식 및 모델연도</th>
+              <td class="align-right">{{year}}년형</td>
+            </tr>
+            <tr>
+              <th class="bold align-left">제조사</th>
+              <td class="align-right">{{company}}</td>
+            </tr>
+            <tr>
+              <th class="bold align-left">모델명</th>
+              <td class="align-right">{{model}}</td>
+            </tr>
+            <tr>
+              <th class="bold align-left">연료</th>
+              <td class="align-right">
+                {{#if (isEquals fuel 'G') }}가솔린{{else if (isEquals fuel 'D')}}디젤{{else if (isEquals fuel 'H')}}하이브리드{{else if (isEquals fuel 'E')}}전기{{else if (isEquals fuel 'L')}}LPG{{else}}?{{/if}}
+              </td>
+            </tr>
+            {{! todo 변속기 }}
+            {{#if color}}
+              <tr>
+                <th class="bold align-left">색상</th>
+                <td class="align-right">{{color}}</td>
+              </tr>
+            {{/if}}
+            <tr>
+              <th class="bold align-left">주행거리</th>
+              <td class="align-right">{{comma-number kilo}} km</td>
+            </tr>
+            {{#if car_number}}
+              <tr>
+                <th class="bold align-left">차량번호</th>
+                <td class="align-right">{{car_number}}</td>
+              </tr>
+            {{/if}}
+            {{#if item_id}}
+              <tr>
+                <th class="bold align-left">차대번호</th>
+                <td class="align-right">{{item_id}}</td>
+              </tr>
+            {{/if}}
+            {{#if power}}
+              <tr>
+                <th class="bold align-left">마력(RPM)</th>
+                <td class="align-right">{{power}}({{rpm}})</td>
+              </tr>
+            {{/if}}
+            {{#if fuel_rate}}
+              <tr>
+                <th class="bold align-left">연비</th>
+                <td class="align-right">{{fuel_rate}}</td>
+              </tr>
+            {{/if}}
+            <tr>
+              <th class="bold align-left">사고/교환</th>
+              <td class="align-right">하단 성능기록부참고</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="basic_info option_info_m">
+          <h3 class="tit">옵션 정보</h3>
+          {{#if (isEmpty option_id)}}
+            <div class="empty">
+              현재 상품의 정확한 옵션을 수집중입니다.
+            </div>
+          {{else}}
+            <table class="table tb_option">
+              <tr>
+                <td class="center">
+                  {{#if navigation}}
+                    <img src="/static/images/icon/option/ico_navi_on.gif" alt="네이게이션" width="55" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_navi_off.gif" alt="네이게이션" width="55" />
+                  {{/if}}
+                </td>
+                <td class="center">
+                  {{#if blackbox}}
+                    <img src="/static/images/icon/option/ico_blackbox_on.gif" alt="블랙박스" width="65" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_blackbox_off.gif" alt="블랙박스" width="65" />
+                  {{/if}}
+                </td>
+                <td class="center">
+                  {{#if sunroof}}
+                    <img src="/static/images/icon/option/ico_sunroof_on.gif" alt="썬루프" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_sunroof_off.gif" alt="썬루프" width="60" />
+                  {{/if}}
+                </td>
+                <td class="center">
+                  {{#if hipass}}
+                    <img src="/static/images/icon/option/ico_hipass_on.gif" alt="하이패스" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_hipass_off.gif" alt="하이패스" width="60" />
+                  {{/if}}
+                </td>
+              </tr>
+              <tr>
+                <td class="center">네비게이션</td>
+                <td class="center">블랙박스</td>
+                <td class="center">썬루프</td>
+                <td class="center">하이패스</td>
+              </tr>
+              <tr>
+                <td class="center">
+                  {{#if rear_camera}}
+                    <img src="/static/images/icon/option/ico_rear_cam_on.gif" alt="후방카메라" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_rear_cam_off.gif" alt="후방카메라" width="60" />
+                  {{/if}}
+                </td>
+                <td class="center">
+                  {{#if smartkey}}
+                    <img src="/static/images/icon/option/ico_smartkey_on.gif" alt="스마트키" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_smartkey_off.gif" alt="스마트키" width="60" />
+                  {{/if}}
+                </td>
+                <td class="center">
+                  {{#if leather_seat}}
+                    <img src="/static/images/icon/option/ico_leather_on.gif" alt="가죽시트" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_leather_off.gif" alt="가죽시트" width="60" />
+                  {{/if}}
+                </td>
+                <td class="center">
+                  {{#if heat_seat}}
+                    <img src="/static/images/icon/option/ico_heat_on.gif" alt="열선시트" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_heat_off.gif" alt="열선시트" width="60" />
+                  {{/if}}
+                </td>
+              </tr>
+              <tr>
+                <td class="center">후방카메라</td>
+                <td class="center">스마트키</td>
+                <td class="center">가죽시트</td>
+                <td class="center">열선시트</td>
+              </tr>
+              <tr>
+                <td class="center">
+                  {{#if cool_seat}}
+                    <img src="/static/images/icon/option/ico_cool_on.gif" alt="통풍시트" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_cool_off.gif" alt="통풍시트" width="60" />
+                  {{/if}}
+                </td>
+                <td class="center">
+                  {{#if memory_seat}}
+                    <img src="/static/images/icon/option/ico_memory_on.gif" alt="메모리시트" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_memory_off.gif" alt="메모리시트" width="60" />
+                  {{/if}}
+                </td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="center">통풍시트</td>
+                <td class="center">메모리시트</td>
+                <td class="center"></td>
+                <td class="center"></td>
+              </tr>
+            </table>
+          {{/if}}
+        </div>
+
+
+        <div class="basic_info performance_history_m">
+          <h3 class="tit">성능 점검 정보</h3>
+          <div class="performance">
+            {{#if (isEmpty performance_id)}}
+              <div class="empty">
+                현재 상품의 성능점검기록을 수집중입니다.
+              </div>
+            {{else}}
+              <div class="car_performance center">
+                <img src="/static/images/mobile/img_car_structure.gif" alt="자동차구조체" width="300" /><br />
+
+                <i class="ico_exchange{{#if (isEmpty hood)}} check_empty {{else if (isEquals hood 'W') }} check_w {{else if (isEquals hood 'X') }} check_x {{else if (isEquals hood 'C') }} check_c {{/if}}p_pos_1"></i>
+                <i class="ico_exchange {{#if (isEmpty front_fender_left)}} check_empty {{else if (isEquals front_fender_left 'W') }} check_w {{else if (isEquals front_fender_left 'X') }} check_x {{else if (isEquals front_fender_left 'C') }} check_c {{/if}} p_pos_2_left"></i>
+                <i class="ico_exchange {{#if (isEmpty front_fender_right)}} check_empty {{else if (isEquals front_fender_right 'W') }} check_w {{else if (isEquals front_fender_right 'X') }} check_x {{else if (isEquals front_fender_right 'C') }} check_c {{/if}} p_pos_2_right"></i>
+                <i class="ico_exchange {{#if (isEmpty door_front_left)}} check_empty {{else if (isEquals door_front_left 'W') }} check_w {{else if (isEquals door_front_left 'X') }} check_x {{else if (isEquals door_front_left 'C') }} check_c {{/if}} p_pos_3_1_1"></i>
+                <i class="ico_exchange {{#if (isEmpty door_front_right)}} check_empty {{else if (isEquals door_front_right 'W') }} check_w {{else if (isEquals door_front_right 'X') }} check_x {{else if (isEquals door_front_right 'C') }} check_c {{/if}} p_pos_3_1_2"></i>
+                <i class="ico_exchange {{#if (isEmpty door_back_left)}} check_empty {{else if (isEquals door_back_left 'W') }} check_w {{else if (isEquals door_back_left 'X') }} check_x {{else if (isEquals door_back_left 'C') }} check_c {{/if}} p_pos_3_2_1"></i>
+                <i class="ico_exchange {{#if (isEmpty door_back_right)}} check_empty {{else if (isEquals door_back_right 'W') }} check_w {{else if (isEquals door_back_right 'X') }} check_x {{else if (isEquals door_back_right 'C') }} check_c {{/if}} p_pos_3_2_2"></i>
+                <i class="ico_exchange {{#if (isEmpty boot_lid)}} check_empty {{else if (isEquals boot_lid 'W') }} check_w {{else if (isEquals boot_lid 'X') }} check_x {{else if (isEquals boot_lid 'C') }} check_c {{/if}} p_pos_4"></i>
+                <i class="ico_exchange {{#if (isEmpty radiator_support)}} check_empty {{else if (isEquals radiator_support 'W') }} check_w {{else if (isEquals radiator_support 'X') }} check_x {{else if (isEquals radiator_support 'C') }} check_c {{/if}} p_pos_5"></i>
+                <i class="ico_exchange {{#if (isEmpty quarter_panel_left)}} check_empty {{else if (isEquals quarter_panel_left 'W') }} check_w {{else if (isEquals quarter_panel_left 'X') }} check_x {{else if (isEquals quarter_panel_left 'C') }} check_c {{/if}} p_pos_6_1"></i>
+                <i class="ico_exchange {{#if (isEmpty quarter_panel_right)}} check_empty {{else if (isEquals quarter_panel_right 'W') }} check_w {{else if (isEquals quarter_panel_right 'X') }} check_x {{else if (isEquals quarter_panel_right 'C') }} check_c {{/if}} p_pos_6_2"></i>
+                <i class="ico_exchange {{#if (isEmpty roof_panel)}} check_empty {{else if (isEquals roof_panel 'W') }} check_w {{else if (isEquals roof_panel 'X') }} check_x {{else if (isEquals roof_panel 'C') }} check_c {{/if}} p_pos_7"></i>
+                <i class="ico_exchange {{#if (isEmpty sideseal_panel_left)}} check_empty {{else if (isEquals sideseal_panel_left 'W') }} check_w {{else if (isEquals sideseal_panel_left 'X') }} check_x {{else if (isEquals sideseal_panel_left 'C') }} check_c {{/if}} p_pos_8_1"></i>
+                <i class="ico_exchange {{#if (isEmpty sideseal_panel_right)}} check_empty {{else if (isEquals sideseal_panel_right 'W') }} check_w {{else if (isEquals sideseal_panel_right 'X') }} check_x {{else if (isEquals sideseal_panel_right 'C') }} check_c {{/if}} p_pos_8_2"></i>
+                <i class="ico_exchange {{#if (isEmpty front_panel)}} check_empty {{else if (isEquals front_panel 'W') }} check_w {{else if (isEquals front_panel 'X') }} check_x {{else if (isEquals front_panel 'C') }} check_c {{/if}} p_pos_9"></i>
+                <i class="ico_exchange {{#if (isEmpty cross_member)}} check_empty {{else if (isEquals cross_member 'W') }} check_w {{else if (isEquals cross_member 'X') }} check_x {{else if (isEquals cross_member 'C') }} check_c {{/if}} p_pos_10"></i>
+                <i class="ico_exchange {{#if (isEmpty cross_member2)}} check_empty {{else if (isEquals cross_member2 'W') }} check_w {{else if (isEquals cross_member2 'X') }} check_x {{else if (isEquals cross_member2 'C') }} check_c {{/if}} p_pos_10_1"></i>
+
+                <i class="ico_exchange {{#if (isEmpty inside_panel_front_left)}} check_empty {{else if (isEquals inside_panel_front_left 'W') }} check_w {{else if (isEquals inside_panel_front_left 'X') }} check_x {{else if (isEquals inside_panel_front_left 'C') }} check_c {{/if}} p_pos_11_1"></i>
+                <i class="ico_exchange {{#if (isEmpty inside_panel_front_right)}} check_empty {{else if (isEquals inside_panel_front_right 'W') }} check_w {{else if (isEquals inside_panel_front_right 'X') }} check_x {{else if (isEquals inside_panel_front_right 'C') }} check_c {{/if}} p_pos_11_2"></i>
+                <i class="ico_exchange {{#if (isEmpty inside_panel_back_left)}} check_empty {{else if (isEquals inside_panel_back_left 'W') }} check_w {{else if (isEquals inside_panel_back_left 'X') }} check_x {{else if (isEquals inside_panel_back_left 'C') }} check_c {{/if}} p_pos_11_3"></i>
+                <i class="ico_exchange {{#if (isEmpty inside_panel_back_right)}} check_empty {{else if (isEquals side_member_right 'W') }} check_w {{else if (isEquals side_member_right 'X') }} check_x {{else if (isEquals side_member_right 'C') }} check_c {{/if}} p_pos_11_4"></i>
+
+                <i class="ico_exchange {{#if (isEmpty side_member_left)}} check_empty {{else if (isEquals side_member_left 'W') }} check_w {{else if (isEquals side_member_left 'X') }} check_x {{else if (isEquals side_member_left 'C') }} check_c {{/if}} p_pos_12_1"></i>
+                <i class="ico_exchange {{#if (isEmpty side_member_right)}} check_empty {{else if (isEquals side_member_right 'W') }} check_w {{else if (isEquals side_member_right 'X') }} check_x {{else if (isEquals side_member_right 'C') }} check_c {{/if}} p_pos_12_2"></i>
+
+
+                <i class="ico_exchange {{#if (isEmpty wheel_house_front_left)}} check_empty {{else if (isEquals wheel_house_front_left 'W') }} check_w {{else if (isEquals wheel_house_front_left 'X') }} check_x {{else if (isEquals wheel_house_front_left 'C') }} check_c {{/if}} p_pos_13_1"></i>
+                <i class="ico_exchange {{#if (isEmpty wheel_house_front_right)}} check_empty {{else if (isEquals wheel_house_front_right 'W') }} check_w {{else if (isEquals wheel_house_front_right 'X') }} check_x {{else if (isEquals wheel_house_front_right 'C') }} check_c {{/if}} p_pos_13_2"></i>
+                <i class="ico_exchange {{#if (isEmpty wheel_house_back_left)}} check_empty {{else if (isEquals wheel_house_back_left 'W') }} check_w {{else if (isEquals wheel_house_back_left 'X') }} check_x {{else if (isEquals wheel_house_back_left 'C') }} check_c {{/if}} p_pos_13_3"></i>
+                <i class="ico_exchange {{#if (isEmpty wheel_house_back_right)}} check_empty {{else if (isEquals wheel_house_back_right 'W') }} check_w {{else if (isEquals wheel_house_back_right 'X') }} check_x {{else if (isEquals wheel_house_back_right 'C') }} check_c {{/if}} p_pos_13_4"></i>
+
+
+                <i class="ico_exchange {{#if (isEmpty pillar_panel_left)}} check_empty {{else if (isEquals pillar_panel_left 'W') }} check_w {{else if (isEquals pillar_panel_left 'X') }} check_x {{else if (isEquals pillar_panel_left 'C') }} check_c {{/if}} p_pos_14_1"></i>
+                <i class="ico_exchange {{#if (isEmpty pillar_panel_right)}} check_empty {{else if (isEquals pillar_panel_right 'W') }} check_w {{else if (isEquals pillar_panel_right 'X') }} check_x {{else if (isEquals pillar_panel_right 'C') }} check_c {{/if}} p_pos_14_2"></i>
+
+                <i class="ico_exchange {{#if (isEmpty dash_panel)}} check_empty {{else if (isEquals dash_panel 'W') }} check_w {{else if (isEquals dash_panel 'X') }} check_x {{else if (isEquals dash_panel 'C') }} check_c {{/if}} p_pos_15"></i>
+                <i class="ico_exchange {{#if (isEmpty floor_panel)}} check_empty {{else if (isEquals floor_panel 'W') }} check_w {{else if (isEquals floor_panel 'X') }} check_x {{else if (isEquals floor_panel 'C') }} check_c {{/if}} p_pos_16"></i>
+                <i class="ico_exchange {{#if (isEmpty boot_floor)}} check_empty {{else if (isEquals boot_floor 'W') }} check_w {{else if (isEquals boot_floor 'X') }} check_x {{else if (isEquals boot_floor 'C') }} check_c {{/if}} p_pos_17"></i>
+                <i class="ico_exchange {{#if (isEmpty rear_panel)}} check_empty {{else if (isEquals rear_panel 'W') }} check_w {{else if (isEquals rear_panel 'X') }} check_x {{else if (isEquals rear_panel 'C') }} check_c {{/if}} p_pos_18"></i>
+                <i class="ico_exchange {{#if (isEmpty package_tray)}} check_empty {{else if (isEquals package_tray 'W') }} check_w {{else if (isEquals package_tray 'X') }} check_x {{else if (isEquals package_tray 'C') }} check_c {{/if}} p_pos_19"></i>
+                <small>승용차 외에는 승용차에 준하여 표시</small>
+              </div>
+            {{/if}}
+
+            {{#if (isEmpty p_img_url)}}
+              <p class="italic customer_req">* 아직 성능점검기록부가 등록되지 않았습니다. <br />
+                차대리 고객센터 <a href="tel:1600-8218">1600-8218</a>이나 <a href="http://plus.kakao.com/home/ov0qv67l" target="_blank">플러스 친구</a> 혹은 <a href="https://talk.naver.com/ct/wc4ktq" target="_blank">네이버 톡톡</a>으로 문의 주세요.
+              </p>
+            {{else}}
+              <a href="#history" class="btn-view-performance">
+                성능점검기록부 원본 보기
+                <i class="glyphicon glyphicon-menu-right"></i>
+              </a>
+            {{/if}}
+
+            <p class="txt">
+              * 딜러보증 기준은 상품 인도일로부터 2,000km / 1개월(30일)입니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="basic_info dealer_note_m">
+          <h3 class="tit">딜러노트</h3>
+          <div class="note_info_m">
+            {{#if (isEmpty dealer_note)}}준비된 딜러 노트가 아직 없습니다.{{else}}{{{dealer_note}}}{{/if}}
+            <span class="note_bottom_folded"><img src="/static/images/sub/mobile/bg_notes_bottom_m.gif" alt="" /></span>
+          </div>
+        </div>
+
+        <div class="intro_chadaeli_subm basic_info">
+          <h3 class="tit">차대리는, <strong>중고차 온라인 오픈 마켓</strong></h3>
+          <img src="/static/images/main/ban_chadaeli_hub_700.jpg" alt="" width="100%" />
+        </div>
+
+
+        <!--{{#if (isEmpty owner)}}-->
+          <!--<div class="basic_info">-->
+            <!--<h3 class="tit">딜러 정보</h3>-->
+            <!--<div class="center">-->
+              <!--<iframe class="iframe_video_dealer" src="https://www.youtube.com/embed/QYlYwEsf0Mg?autoplay=0&rel=0&showinfo=1&controls=1&autohide=1&theme=light&disablekb=1&modestbranding=1" frameborder="0" allowfullscreen></iframe>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--{{else}}-->
+          <!--<div class="basic_info">-->
+            <!--<h3 class="tit">딜러 정보</h3>-->
+            <!--<div class="center">-->
+              <!--{{#if admin_video}}-->
+                <!--<iframe class="iframe_video_dealer" src="https://www.youtube.com/embed/{{admin_video}}?autoplay=0&rel=0&showinfo=1&controls=1&autohide=1&theme=light&disablekb=1&modestbranding=1" frameborder="0" allowfullscreen></iframe>-->
+              <!--{{/if}}-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--{{/if}}-->
+
+        {{! 성능기록부 원본 출력 }}
+        <div class="view_performance_resource blind">
+          <img src="{{../static}}performance_record/{{p_img_url}}" alt="중고차 성능점검 기록부" width="100%" />
+        </div>
+
+      <div class="basic_info item_images_m">
+        <h3 class="tit">상품 자세히 보기</h3>
+        {{#each ../images}}
+          <div style="margin-bottom: 10px;">
+            <img src="{{../../static}}item_images/{{../img_url}}/{{this}}" alt="" class="img_thumbnail" />
+          </div>
+        {{/each}}
+      </div>
+
+        <div class="ban_partner_m" style="padding-top: 20px;">
+          <a href="http://blog.naver.com/chadaeli/221133468406" target="_blank">
+            <img src="/static/images/partnership/banner/banner_partnership_m_top.jpg" alt="차대리파트너모집" width="100%" />
+          </a>
+          <a href="http://livethecar.kr/" target="_blank">
+            <img src="/static/images/main/ban_img_livethecar_m.jpg" alt="중고차 방송, 이차어때" width="100%" />
+          </a>
+        </div>
+
+      {{/each}}
+
+
+
+      <!--<div class="evt_area center">-->
+        <!--<a href="/request">-->
+          <!--<img src="/static/images/event/m_evt_direct.gif" alt="중고차 다이렉트" class="ban_evt_direct" />-->
+        <!--</a>-->
+      <!--</div>-->
+
+      {{! todo 특가상품 중에서 동일한 차종을 모두 긁어와서 신차급만 골라서 보여준다. 단 팔린 상품은 제외 단 갯수는 5개 그리고 랜덤 }}
+      <div class="basic_info blind">
+        <h3 class="tit">추천 상품</h3>
+        <div>
+          준비중...
+        </div>
+      </div>
+    </div>
+
+    {{>m_ft}}
+    {{>m_cloud}}
+  </div>
+{{else}}
+  {{! ============ PC ================ }}
+  <div class="container_p">
+    {{>pc_header}}
+    {{>wing_right}}
+    <div class="sub_detail">
+        {{#each info}}
+        <div class="sub_detail_main clearfix">
+            <div class="image_viewer">
+                <div class="imgs_area swiper-container">
+                    {{#unless (isEmpty video_url)}}<img src="/static/images/icon/ico_medal.png" alt="차대리인증" width="40" class="ico_medal" />{{/unless}}
+                    <div class="swiper-wrapper">
+                        {{#if (isEmpty ../images)}}
+                            <div class="swiper-slide">
+                                <img src="{{../static}}cars/{{img_url}}" alt="" class="img_thumbnail" />
+                            </div>
+                        {{else}}
+                            {{#each ../images}}
+                                <div class="swiper-slide">
+                                    <img src="{{../../static}}item_images/{{../img_url}}/{{this}}" alt="" class="img_thumbnail" />
+                                </div>
+                            {{/each}}
+                        {{/if}}
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                    {{#if (isEquals ../isMobile 0)}}
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="item_simple_info">
+                <div class="item_info_pc">
+                  <p class="badge_area clearfix">
+                      {{#unless (isEmpty video_url)}}<span class="badge">차대리인증</span>&nbsp;{{/unless}}
+                      <span class="badge">할인가능</span>&nbsp;
+                      {{#if (isEquals sold 1)}}<span class="badge ico_sold">거래완료</span>{{/if}}
+                      <a href="javascript:alert('신고하기 기능은 준비중입니다.');" class="btn_alert_item">
+                        <img src="/static/images/sub/btn_alert_item.jpg" alt="신고하기" />
+                      </a>
+                  </p>
+                  <strong class="tit block">{{model}}</strong>
+                  <p class="info">
+                      {{{year}}}년형
+                      <span class="split">|</span>
+                      {{#if (isEquals fuel 'G') }}가솔린{{else if (isEquals fuel 'D')}}디젤{{else if (isEquals fuel 'H')}}하이브리드{{else if (isEquals fuel 'E')}}전기{{else if (isEquals fuel 'L')}}LPG{{else}}?{{/if}}
+                      <span class="split">|</span>
+                      {{comma-number kilo}}km
+                  </p>
+
+                  <div class="price_section_sub">
+                    <span class="item_price_only center">
+                      <span class="startText">상품 시작가</span><br />
+                      <strong class="startPrice">{{price}}</strong>
+                      <span class="startUnit">만원</span>
+                    </span>
+                    <span class="item_price_only amount_price_sub center">
+                      <span class="startText">총예상비용 (대략 약)
+                        {{!todo 풍선도움말을 통해서 계산식에 대한 도움을 줄 수 있도록 한다. }}
+                        <!--<a href=""><img src="/static/images/sub/btn_question_amountprice.gif" alt="" /></a>-->
+                      </span><br />
+                      <strong class="startPrice">~ {{amountPrice price type_id fuel}}</strong>
+                      <span class="startUnit">만원이하</span>
+                    </span>
+                  </div>
+                </div>
+              
+                <div class="req_info">
+                  <div class="center req_lowprice_wrp">
+                    <a href="/request/2dealer/{{id}}" target="_blank" class="btn_low_price">"차주"에게 <strong>"최저가"</strong>를 물어봐!!</a>
+                  </div>
+
+                  {{#unless (isEmpty blog_url)}}
+                  <div class="clearfix req_btn_area">
+                    <a href="http://blog.naver.com/chadaeli/{{blog_url}}" target="_blank" class="req req_blog">
+                      <img src="/static/images/sub/btn_blog_sub_pc.jpg" alt="블로그에서보기" />
+                    </a>
+                    <a href="https://talk.naver.com/ct/wc4ktq" target="_blank" class="req req_talktalk">
+                      <img src="/static/images/sub/btn_talktalk_sub_pc.jpg" alt="톡톡으로 문의하기" />
+                    </a>
+                    <a href="http://plus.kakao.com/home/ov0qv67l" target="_blank" class="req req_pluschigu">
+                      <img src="/static/images/sub/btn_pluschin_sub_pc.jpg" alt="플친으로 문의하기" />
+                    </a>
+                  </div>
+                  {{else}}
+                  <div class="clearfix">
+                    <a href="https://talk.naver.com/ct/wc4ktq" target="_blank" class="req" style="margin-right: 8px;">
+                      <img src="/static/images/sub/btn_talktalk_sub_pc2.jpg" alt="톡톡으로 문의하기" />
+                    </a>
+                    <a href="http://plus.kakao.com/home/ov0qv67l" target="_blank" class="req">
+                      <img src="/static/images/sub/btn_pluschin_sub_pc2.jpg" alt="플친으로 문의하기" />
+                    </a>
+                  </div>
+                  {{/unless}}
+                  <div>
+                    <a href="javascript:alert('중고차1등안전거래, 차대리 고객센터 1600-8218로 연락주시기 바랍니다.');">
+                      <img src="/static/images/sub/btn_customer_sub_pc.jpg" alt="고객센터 1600-8218" />
+                    </a>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="basic_info guarantee_section clearfix center">
+          {{#unless (isEmpty video_url)}}<h3 class="tit">상품 인증 동영상 및 상사정보</h3>
+          {{else}}<h3 class="tit">상품 소유 상사 정보</h3>
+          {{/unless}}
+          <div class="chadaeli_guarantee fleft">
+          {{#unless (isEmpty video_url)}}
+            <iframe src="https://www.youtube.com/embed/{{video_url}}?autoplay=0&rel=0&showinfo=1&controls=1&autohide=1&theme=light&disablekb=1&modestbranding=1" frameborder="0" allowfullscreen width="530" height="300"></iframe>
+          {{else}}
+            {{!todo 상사 이미지가 아직 등록이 된 것이 없기 때문에 일단은 상품썸네일을 노출한다. }}
+            <img src="{{../static}}cars/{{img_url}}" alt="" width="530" />
+          {{/unless}}
+          </div>
+          <div class="dealer_info fleft {{#if (isEquals level 'S')}}special_store_badge{{else}}general_store_badge{{/if}}">
+            <table class="tb_store_info">
+              <tr>
+                <th>시도 / 지역</th>
+                <td>{{province}} / {{region}}</td>
+              </tr>
+              <tr>
+                <th>상사명</th>
+                <td>{{store_name}}</td>
+              </tr>
+              <tr>
+                <th>대표명</th>
+                <td>{{ceo_name}}</td>
+              </tr>
+              {{#if (isEquals level 'S')}}
+              <tr>
+                <th>대표 연락처</th>
+                <td>{{ceo_tel}}</td>
+              </tr>
+              {{else}}
+              <tr>
+                <th>고객센터</th>
+                <td>1600-8218</td>
+              </tr>
+              {{/if}}
+            </table>
+
+            {{#if (isEquals level 'S')}}
+            <div class="home_link_area">
+              <a href="/store/{{eng_name}}" target="_blank">
+                <img src="/static/images/sub/btn_special_store_home.jpg" alt="특별제휴상사 홈페이지" />
+              </a>
+            </div>
+            {{/if}}
+          </div>
+        </div>
+
+        <div class="basic_info clearfix">
+          <div class="item_basic_info_sub">
+            <h3 class="tit">상품 기본 정보</h3>
+            <table class="table tb_item_basic_info">
+              <tr>
+                <th class="bold align-left">형식 및 모델연도</th>
+                <td class="align-right">{{year}}년형</td>
+              </tr>
+              <tr>
+                <th class="bold align-left">제조사</th>
+                <td class="align-right">{{company}}</td>
+              </tr>
+              <tr>
+                <th class="bold align-left">모델명</th>
+                <td class="align-right">{{model}}</td>
+              </tr>
+              <tr>
+                <th class="bold align-left">연료</th>
+                <td class="align-right">
+                  {{#if (isEquals fuel 'G') }}가솔린{{else if (isEquals fuel 'D')}}디젤{{else if (isEquals fuel 'H')}}하이브리드{{else if (isEquals fuel 'E')}}전기{{else if (isEquals fuel 'L')}}LPG{{else}}?{{/if}}
+                </td>
+              </tr>
+              {{! todo 변속기 }}
+              {{#if color}}
+                <tr>
+                  <th class="bold align-left">색상</th>
+                  <td class="align-right">{{color}}</td>
+                </tr>
+              {{/if}}
+              <tr>
+                <th class="bold align-left">주행거리</th>
+                <td class="align-right">{{comma-number kilo}} km</td>
+              </tr>
+              {{#if car_number}}
+                <tr>
+                  <th class="bold align-left">차량번호</th>
+                  <td class="align-right">{{car_number}}</td>
+                </tr>
+              {{/if}}
+              {{#if item_id}}
+                <tr>
+                  <th class="bold align-left">차대번호</th>
+                  <td class="align-right">{{item_id}}</td>
+                </tr>
+              {{/if}}
+              {{#if power}}
+                <tr>
+                  <th class="bold align-left">마력(RPM)</th>
+                  <td class="align-right">{{power}}({{rpm}})</td>
+                </tr>
+              {{/if}}
+              {{#if fuel_rate}}
+                <tr>
+                  <th class="bold align-left">연비</th>
+                  <td class="align-right">{{fuel_rate}}</td>
+                </tr>
+              {{/if}}
+              <tr>
+                <th class="bold align-left">사고/교환</th>
+                <td class="align-right">하단 성능기록부참고</td>
+              </tr>
+            </table>
+          </div>
+          <div class="item_option_info_sub">
+            <h3 class="tit">옵션 정보</h3>
+          {{#if (isEmpty option_id)}}
+            <div class="empty">
+              현재 상품의 정확한 옵션을 수집중입니다.
+            </div>
+          {{else}}
+            <table class="table tb_option">
+              <tr>
+                <td class="center">
+                  {{#if navigation}}
+                    <img src="/static/images/icon/option/ico_navi_on.gif" alt="네이게이션" width="55" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_navi_off.gif" alt="네이게이션" width="55" />
+                  {{/if}}
+                </td>
+                <td class="center">
+                  {{#if blackbox}}
+                    <img src="/static/images/icon/option/ico_blackbox_on.gif" alt="블랙박스" width="65" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_blackbox_off.gif" alt="블랙박스" width="65" />
+                  {{/if}}
+                </td>
+                <td class="center">
+                  {{#if sunroof}}
+                    <img src="/static/images/icon/option/ico_sunroof_on.gif" alt="썬루프" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_sunroof_off.gif" alt="썬루프" width="60" />
+                  {{/if}}
+                </td>
+                <td class="center">
+                  {{#if hipass}}
+                    <img src="/static/images/icon/option/ico_hipass_on.gif" alt="하이패스" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_hipass_off.gif" alt="하이패스" width="60" />
+                  {{/if}}
+                </td>
+              </tr>
+              <tr>
+                <td class="center">네비게이션</td>
+                <td class="center">블랙박스</td>
+                <td class="center">썬루프</td>
+                <td class="center">하이패스</td>
+              </tr>
+              <tr>
+                <td class="center">
+                  {{#if rear_camera}}
+                    <img src="/static/images/icon/option/ico_rear_cam_on.gif" alt="후방카메라" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_rear_cam_off.gif" alt="후방카메라" width="60" />
+                  {{/if}}
+                </td>
+                <td class="center">
+                  {{#if smartkey}}
+                    <img src="/static/images/icon/option/ico_smartkey_on.gif" alt="스마트키" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_smartkey_off.gif" alt="스마트키" width="60" />
+                  {{/if}}
+                </td>
+                <td class="center">
+                  {{#if leather_seat}}
+                    <img src="/static/images/icon/option/ico_leather_on.gif" alt="가죽시트" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_leather_off.gif" alt="가죽시트" width="60" />
+                  {{/if}}
+                </td>
+                <td class="center">
+                  {{#if heat_seat}}
+                    <img src="/static/images/icon/option/ico_heat_on.gif" alt="열선시트" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_heat_off.gif" alt="열선시트" width="60" />
+                  {{/if}}
+                </td>
+              </tr>
+              <tr>
+                <td class="center">후방카메라</td>
+                <td class="center">스마트키</td>
+                <td class="center">가죽시트</td>
+                <td class="center">열선시트</td>
+              </tr>
+              <tr>
+                <td class="center">
+                  {{#if cool_seat}}
+                    <img src="/static/images/icon/option/ico_cool_on.gif" alt="통풍시트" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_cool_off.gif" alt="통풍시트" width="60" />
+                  {{/if}}
+                </td>
+                <td class="center">
+                  {{#if memory_seat}}
+                    <img src="/static/images/icon/option/ico_memory_on.gif" alt="메모리시트" width="60" />
+                  {{else}}
+                    <img src="/static/images/icon/option/ico_memory_off.gif" alt="메모리시트" width="60" />
+                  {{/if}}
+                </td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="center">통풍시트</td>
+                <td class="center">메모리시트</td>
+                <td class="center"></td>
+                <td class="center"></td>
+              </tr>
+            </table>
+          {{/if}}
+          </div>
+        </div>
+
+        <div class="basic_info clearfix">
+          <div class="performance_history_section">
+            <h3 class="tit">성능 점검 정보</h3>
+            <div class="performance">
+            {{#if (isEmpty performance_id)}}
+              <div class="empty">
+                현재 상품의 성능점검기록을 수집중입니다.
+              </div>
+            {{else}}
+              <div class="car_performance center">
+                <img src="/static/images/mobile/img_car_structure.gif" alt="자동차구조체" width="300" /><br />
+
+                <i class="ico_exchange{{#if (isEmpty hood)}} check_empty {{else if (isEquals hood 'W') }} check_w {{else if (isEquals hood 'X') }} check_x {{else if (isEquals hood 'C') }} check_c {{/if}}p_pos_1"></i>
+                <i class="ico_exchange {{#if (isEmpty front_fender_left)}} check_empty {{else if (isEquals front_fender_left 'W') }} check_w {{else if (isEquals front_fender_left 'X') }} check_x {{else if (isEquals front_fender_left 'C') }} check_c {{/if}} p_pos_2_left"></i>
+                <i class="ico_exchange {{#if (isEmpty front_fender_right)}} check_empty {{else if (isEquals front_fender_right 'W') }} check_w {{else if (isEquals front_fender_right 'X') }} check_x {{else if (isEquals front_fender_right 'C') }} check_c {{/if}} p_pos_2_right"></i>
+                <i class="ico_exchange {{#if (isEmpty door_front_left)}} check_empty {{else if (isEquals door_front_left 'W') }} check_w {{else if (isEquals door_front_left 'X') }} check_x {{else if (isEquals door_front_left 'C') }} check_c {{/if}} p_pos_3_1_1"></i>
+                <i class="ico_exchange {{#if (isEmpty door_front_right)}} check_empty {{else if (isEquals door_front_right 'W') }} check_w {{else if (isEquals door_front_right 'X') }} check_x {{else if (isEquals door_front_right 'C') }} check_c {{/if}} p_pos_3_1_2"></i>
+                <i class="ico_exchange {{#if (isEmpty door_back_left)}} check_empty {{else if (isEquals door_back_left 'W') }} check_w {{else if (isEquals door_back_left 'X') }} check_x {{else if (isEquals door_back_left 'C') }} check_c {{/if}} p_pos_3_2_1"></i>
+                <i class="ico_exchange {{#if (isEmpty door_back_right)}} check_empty {{else if (isEquals door_back_right 'W') }} check_w {{else if (isEquals door_back_right 'X') }} check_x {{else if (isEquals door_back_right 'C') }} check_c {{/if}} p_pos_3_2_2"></i>
+                <i class="ico_exchange {{#if (isEmpty boot_lid)}} check_empty {{else if (isEquals boot_lid 'W') }} check_w {{else if (isEquals boot_lid 'X') }} check_x {{else if (isEquals boot_lid 'C') }} check_c {{/if}} p_pos_4"></i>
+                <i class="ico_exchange {{#if (isEmpty radiator_support)}} check_empty {{else if (isEquals radiator_support 'W') }} check_w {{else if (isEquals radiator_support 'X') }} check_x {{else if (isEquals radiator_support 'C') }} check_c {{/if}} p_pos_5"></i>
+                <i class="ico_exchange {{#if (isEmpty quarter_panel_left)}} check_empty {{else if (isEquals quarter_panel_left 'W') }} check_w {{else if (isEquals quarter_panel_left 'X') }} check_x {{else if (isEquals quarter_panel_left 'C') }} check_c {{/if}} p_pos_6_1"></i>
+                <i class="ico_exchange {{#if (isEmpty quarter_panel_right)}} check_empty {{else if (isEquals quarter_panel_right 'W') }} check_w {{else if (isEquals quarter_panel_right 'X') }} check_x {{else if (isEquals quarter_panel_right 'C') }} check_c {{/if}} p_pos_6_2"></i>
+                <i class="ico_exchange {{#if (isEmpty roof_panel)}} check_empty {{else if (isEquals roof_panel 'W') }} check_w {{else if (isEquals roof_panel 'X') }} check_x {{else if (isEquals roof_panel 'C') }} check_c {{/if}} p_pos_7"></i>
+                <i class="ico_exchange {{#if (isEmpty sideseal_panel_left)}} check_empty {{else if (isEquals sideseal_panel_left 'W') }} check_w {{else if (isEquals sideseal_panel_left 'X') }} check_x {{else if (isEquals sideseal_panel_left 'C') }} check_c {{/if}} p_pos_8_1"></i>
+                <i class="ico_exchange {{#if (isEmpty sideseal_panel_right)}} check_empty {{else if (isEquals sideseal_panel_right 'W') }} check_w {{else if (isEquals sideseal_panel_right 'X') }} check_x {{else if (isEquals sideseal_panel_right 'C') }} check_c {{/if}} p_pos_8_2"></i>
+                <i class="ico_exchange {{#if (isEmpty front_panel)}} check_empty {{else if (isEquals front_panel 'W') }} check_w {{else if (isEquals front_panel 'X') }} check_x {{else if (isEquals front_panel 'C') }} check_c {{/if}} p_pos_9"></i>
+                <i class="ico_exchange {{#if (isEmpty cross_member)}} check_empty {{else if (isEquals cross_member 'W') }} check_w {{else if (isEquals cross_member 'X') }} check_x {{else if (isEquals cross_member 'C') }} check_c {{/if}} p_pos_10"></i>
+                <i class="ico_exchange {{#if (isEmpty cross_member2)}} check_empty {{else if (isEquals cross_member2 'W') }} check_w {{else if (isEquals cross_member2 'X') }} check_x {{else if (isEquals cross_member2 'C') }} check_c {{/if}} p_pos_10_1"></i>
+
+                <i class="ico_exchange {{#if (isEmpty inside_panel_front_left)}} check_empty {{else if (isEquals inside_panel_front_left 'W') }} check_w {{else if (isEquals inside_panel_front_left 'X') }} check_x {{else if (isEquals inside_panel_front_left 'C') }} check_c {{/if}} p_pos_11_1"></i>
+                <i class="ico_exchange {{#if (isEmpty inside_panel_front_right)}} check_empty {{else if (isEquals inside_panel_front_right 'W') }} check_w {{else if (isEquals inside_panel_front_right 'X') }} check_x {{else if (isEquals inside_panel_front_right 'C') }} check_c {{/if}} p_pos_11_2"></i>
+                <i class="ico_exchange {{#if (isEmpty inside_panel_back_left)}} check_empty {{else if (isEquals inside_panel_back_left 'W') }} check_w {{else if (isEquals inside_panel_back_left 'X') }} check_x {{else if (isEquals inside_panel_back_left 'C') }} check_c {{/if}} p_pos_11_3"></i>
+                <i class="ico_exchange {{#if (isEmpty inside_panel_back_right)}} check_empty {{else if (isEquals side_member_right 'W') }} check_w {{else if (isEquals side_member_right 'X') }} check_x {{else if (isEquals side_member_right 'C') }} check_c {{/if}} p_pos_11_4"></i>
+
+                <i class="ico_exchange {{#if (isEmpty side_member_left)}} check_empty {{else if (isEquals side_member_left 'W') }} check_w {{else if (isEquals side_member_left 'X') }} check_x {{else if (isEquals side_member_left 'C') }} check_c {{/if}} p_pos_12_1"></i>
+                <i class="ico_exchange {{#if (isEmpty side_member_right)}} check_empty {{else if (isEquals side_member_right 'W') }} check_w {{else if (isEquals side_member_right 'X') }} check_x {{else if (isEquals side_member_right 'C') }} check_c {{/if}} p_pos_12_2"></i>
+
+
+                <i class="ico_exchange {{#if (isEmpty wheel_house_front_left)}} check_empty {{else if (isEquals wheel_house_front_left 'W') }} check_w {{else if (isEquals wheel_house_front_left 'X') }} check_x {{else if (isEquals wheel_house_front_left 'C') }} check_c {{/if}} p_pos_13_1"></i>
+                <i class="ico_exchange {{#if (isEmpty wheel_house_front_right)}} check_empty {{else if (isEquals wheel_house_front_right 'W') }} check_w {{else if (isEquals wheel_house_front_right 'X') }} check_x {{else if (isEquals wheel_house_front_right 'C') }} check_c {{/if}} p_pos_13_2"></i>
+                <i class="ico_exchange {{#if (isEmpty wheel_house_back_left)}} check_empty {{else if (isEquals wheel_house_back_left 'W') }} check_w {{else if (isEquals wheel_house_back_left 'X') }} check_x {{else if (isEquals wheel_house_back_left 'C') }} check_c {{/if}} p_pos_13_3"></i>
+                <i class="ico_exchange {{#if (isEmpty wheel_house_back_right)}} check_empty {{else if (isEquals wheel_house_back_right 'W') }} check_w {{else if (isEquals wheel_house_back_right 'X') }} check_x {{else if (isEquals wheel_house_back_right 'C') }} check_c {{/if}} p_pos_13_4"></i>
+
+
+                <i class="ico_exchange {{#if (isEmpty pillar_panel_left)}} check_empty {{else if (isEquals pillar_panel_left 'W') }} check_w {{else if (isEquals pillar_panel_left 'X') }} check_x {{else if (isEquals pillar_panel_left 'C') }} check_c {{/if}} p_pos_14_1"></i>
+                <i class="ico_exchange {{#if (isEmpty pillar_panel_right)}} check_empty {{else if (isEquals pillar_panel_right 'W') }} check_w {{else if (isEquals pillar_panel_right 'X') }} check_x {{else if (isEquals pillar_panel_right 'C') }} check_c {{/if}} p_pos_14_2"></i>
+
+                <i class="ico_exchange {{#if (isEmpty dash_panel)}} check_empty {{else if (isEquals dash_panel 'W') }} check_w {{else if (isEquals dash_panel 'X') }} check_x {{else if (isEquals dash_panel 'C') }} check_c {{/if}} p_pos_15"></i>
+                <i class="ico_exchange {{#if (isEmpty floor_panel)}} check_empty {{else if (isEquals floor_panel 'W') }} check_w {{else if (isEquals floor_panel 'X') }} check_x {{else if (isEquals floor_panel 'C') }} check_c {{/if}} p_pos_16"></i>
+                <i class="ico_exchange {{#if (isEmpty boot_floor)}} check_empty {{else if (isEquals boot_floor 'W') }} check_w {{else if (isEquals boot_floor 'X') }} check_x {{else if (isEquals boot_floor 'C') }} check_c {{/if}} p_pos_17"></i>
+                <i class="ico_exchange {{#if (isEmpty rear_panel)}} check_empty {{else if (isEquals rear_panel 'W') }} check_w {{else if (isEquals rear_panel 'X') }} check_x {{else if (isEquals rear_panel 'C') }} check_c {{/if}} p_pos_18"></i>
+                <i class="ico_exchange {{#if (isEmpty package_tray)}} check_empty {{else if (isEquals package_tray 'W') }} check_w {{else if (isEquals package_tray 'X') }} check_x {{else if (isEquals package_tray 'C') }} check_c {{/if}} p_pos_19"></i>
+                <small>승용차 외에는 승용차에 준하여 표시</small>
+              </div>
+            {{/if}}
+
+            {{#if (isEmpty p_img_url)}}
+              <p class="italic customer_req">* 아직 성능점검기록부가 등록되지 않았습니다. <br />
+                차대리 고객센터 <a href="tel:1600-8218">1600-8218</a>이나 <a href="http://plus.kakao.com/home/ov0qv67l" target="_blank">플러스 친구</a> 혹은 <a href="https://talk.naver.com/ct/wc4ktq" target="_blank">네이버 톡톡</a>으로 문의 주세요.
+              </p>
+            {{else}}
+              <a href="#history" class="btn-view-performance">
+                성능점검기록부 원본 보기
+                <i class="glyphicon glyphicon-menu-right"></i>
+              </a>
+            {{/if}}
+
+            <p class="txt">
+              * 딜러보증 기준은 상품 인도일로부터 2,000km / 1개월(30일)입니다.
+            </p>
+          </div>
+          </div>
+          <div class="dealer_note">
+            <h3 class="tit">딜러 노트</h3>
+            <div class="notes_info">{{#if (isEmpty dealer_note)}}준비된 딜러 노트가 아직 없습니다.{{else}}{{{dealer_note}}}{{/if}}</div>
+          </div>
+        </div>
+
+        {{! 성능기록부 원본 출력 }}
+        <div class="view_performance_resource blind">
+          <img src="{{../static}}performance_record/{{p_img_url}}" alt="중고차 성능점검 기록부" width="100%" />
+        </div>
+      {{/each}}
+
+      <hr />
+
+      <div class="ban_chadaeli_pc">
+        <h3 class="c_head"><strong>차대리는?</strong><small> 차대리는 중고차 거래의 허브 역할을 하는 온라인 오픈 마켓입니다. (중고차온라인오픈마켓) </small></h3>
+        <img src="/static/images/main/ban_chadaeli_hub_pc.jpg" alt="차대리, 중고차온라인오픈마켓" />
+      </div>
+
+      <!--<div class="evt_area_pc center">-->
+        <!--&lt;!&ndash;<a href="/request" target="_blank">&ndash;&gt;-->
+            <!--&lt;!&ndash;<img src="/static/images/desktop/banner/ban_usedcar_direct.jpg" alt="중고차 다이렉트" width="1080" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+      <!--</div>-->
+
+      <div class="direct_images center clearfix">
+        {{#each info}}
+        {{#each ../images}}
+        <div class="img_wrap">
+          <img src="{{../../static}}item_images/{{../img_url}}/{{this}}" alt="" class="item_images" />
+        </div>
+        {{/each}}
+          <div class="img_wrap">
+            <a href="http://blog.naver.com/chadaeli/221133468406" target="_blank">
+              <img src="/static/images/event/img_partnership_ban.jpeg" alt="차대리 파트너 모집" class="item_images" />
+            </a>
+          </div>
+        {{/each}}
+      </div>
+
+      {{! todo 특가상품 중에서 동일한 차종을 모두 긁어와서 신차급만 골라서 보여준다. 단 팔린 상품은 제외 단 갯수는 5개 그리고 랜덤 }}
+      <div class="basic_info blind">
+        <h3 class="tit">추천 상품</h3>
+        <div>
+          준비중...
+        </div>
+      </div>
+    </div>
+
+    {{>pc_footer}}
+    {{>cloud_nav_bottom}}
+  </div>
+{{/if}}

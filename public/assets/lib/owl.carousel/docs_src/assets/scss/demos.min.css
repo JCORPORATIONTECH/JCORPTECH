@@ -1,0 +1,1 @@
+body:before{white-space:pre;font-family:monospace;content:"Error: Undefined variable: \"$small-up\".\A         on line 30 of demos.scss\A \A 25: 		}\A 26: 	}\A 27: }\A 28: \A 29: \A 30: @media #{$small-up} {\A 31: 	.demo-list{\A 32: 		[class*=\"column\"]+[class*=\"column\"]:last-child {\A 33: 			float: left;\A 34: 		}\A 35: 	}"}

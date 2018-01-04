@@ -1,0 +1,49 @@
+{{#if (isEquals isMobile 1 )}}
+  <div class="m_container">
+    {{>hd}}
+    <article class="m_chadaeli introduce" style="border: 1px solid #fff;">
+      <div>
+        <div style="padding: 40px 10px;">
+          <img src="/static/images/introduce/img_intro_01.jpg" alt="" class="img_partnership" />
+        </div>
+        <div class="bg_grey" style="padding: 40px 20px;">
+          <img src="/static/images/introduce/img_intro_02.jpg" alt="" class="img_partnership" />
+        </div>
+        <div style="padding: 40px 20px;">
+          <img src="/static/images/introduce/img_intro_03.jpg" alt="" class="img_partnership" />
+        </div>
+        <div class="bg_grey" style="padding: 40px 20px;">
+          <img src="/static/images/introduce/img_intro_04.jpg" alt="" class="img_partnership" />
+        </div>
+        <div style="padding: 40px 20px;">
+          <img src="/static/images/introduce/img_intro_05.jpg" alt="" class="img_partnership" />
+        </div>
+        <div class="bg_grey" style="padding: 40px 20px;">
+          <a href="tel:1600-8218"><img src="/static/images/introduce/img_intro_06.jpg" alt="" class="img_partnership" /></a>
+        </div>
+      </div>
+      <!--<div style="padding: 10px;">-->
+        <!--<h4 class="center">제휴문의 <a href="tel:1600-8218" class="bold">1600-8218</a></h4>-->
+        <!--<h5 class="center red">홍보 비용 없이 무료로 상품 광고를 대신 해드립니다. 저희와 뜻을 같이 하실 분들만 연락주세요.</h5>-->
+      <!--</div>-->
+    </article>
+    {{>m_ft}}
+    {{>m_cloud}}
+  </div>
+{{else}}
+{{! ============================ 여기서부터 PC용 뷰 ============================ }}
+  <div class="container_p">
+    {{>pc_header}}
+    <div class="con_p">
+      <div class="center" style="padding-top: 80px;">
+        <img src="/static/images/introduce/img_intro_pc_01.jpg" alt="" />
+        <img src="/static/images/introduce/img_intro_pc_02.jpg" alt="" />
+        <img src="/static/images/introduce/img_intro_pc_03.jpg" alt="" />
+        <img src="/static/images/introduce/img_intro_pc_04.jpg" alt="" />
+        <img src="/static/images/introduce/img_intro_pc_05.jpg" alt="" />
+        <img src="/static/images/introduce/img_intro_pc_06.jpg" alt="" />
+      </div>
+    </div>
+    {{>pc_footer}}
+  </div>
+{{/if}}

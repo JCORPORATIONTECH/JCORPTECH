@@ -1,0 +1,427 @@
+body {
+  font-family: Arial;
+  overflow-x: hidden;
+}
+
+.logo{
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-more{
+  float: right;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+.btn-question{
+  float: left;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+.tips{
+  li{
+    font-size: 16px;
+  }
+}
+
+.commitment{
+  padding-top: 10px;
+  margin-bottom: 20px;
+  li{
+    font-size: 17px;
+    color: #6a6a6a;
+  }
+  strong{
+    font-size: 20px;
+    color: #444;
+  }
+}
+
+.heading{
+  border-bottom: 1px solid #bebebe;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+.btn-back{
+  margin-top: 5px;
+}
+
+.btn{
+  font-size: 16px;
+}
+
+.process{
+  padding-top: 20px;
+  .heading{
+    font-size: 24px;
+  }
+  li{
+    font-size: 20px;
+    list-style: circle;
+    color: #6a6a6a;
+    margin-bottom: 20px;
+  }
+  strong{
+    color: #444;
+  }
+}
+
+.cs_info{
+  padding-top: 20px;
+  li{
+    list-style: square;
+    font-size: 14px;
+  }
+  address{
+    padding-top: 20px;
+  }
+  .tel{
+    font-size: 18px;
+  }
+  .email{
+    font-size: 18px;
+  }
+}
+
+#main{
+  .video_more{
+    display: block;
+    text-align: center;
+    height: 125px;
+    padding-top: 30px;
+    position: relative;
+  }
+
+  .img_preview{
+    width: 100%;
+  }
+
+  .btn-more{
+    min-width: 200px;
+    max-width: 320px;
+    height: 40px;
+    line-height: 26px;
+    text-align: center;
+    border: 3px solid #30BDEF;
+    border-radius: 20px;
+    float: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .event{
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  .evt_list{
+    list-style: none;
+    padding: 0 10px;
+    li{
+      min-height : 155px;
+    }
+  }
+
+  .img_evt{
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 10px;
+  }
+
+  .appointment{
+    position: relative;
+    padding: 20px 0 0 0;
+    border-bottom: 1px solid #eee;
+    strong{
+      font-size: 20px;
+      color :#7d7d7d;
+    }
+    p.txt{
+      font-size: 18px;
+      color :#7d7d7d;
+      vertical-align: middle;
+      padding: 10px 0;
+    }
+    .info{
+      padding: 10px;
+    }
+
+    .info_01,.info_02,.info_03{
+      position: relative;
+      padding-left: 90px;
+      min-height: 80px;
+    }
+
+    .img_01, .img_02, .img_03{
+      width: 70px;
+      height: 70px;
+      overflow:hidden;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      background:url('/static/images/v2/bg_appointment.gif') no-repeat 0 0;
+    }
+
+    .img_02{
+      background-position: 0 -70px;
+    }
+
+    .img_03{
+      background-position: 0 -140px;
+    }
+
+  }
+
+  .quo_left{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+  }
+
+  .quo_right{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .con_bg_03{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .video{
+    background: #000;
+  }
+}
+
+
+
+.cloud_area{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background: #ddd;
+  z-index: 100;
+  a.link{
+    margin-top: 8px;
+    display: inline-block;
+  }
+}
+
+
+.event_page{
+
+  padding: 0 10px;
+
+  .img_event{
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 500px;
+  }
+  .heading{
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .evt_list{
+    list-style: none;
+    padding: 0;
+  }
+}
+
+
+.btn-kakaotalk,.btn-email{
+  color: #fff;
+  text-decoration: underline;
+}
+
+.btn-kakaotalk:hover,.btn-email:hover{
+  color: #fff;
+}
+
+
+// 2.0 renewal
+.section-head{
+  text-align: left !important;
+  padding: 10px;
+  background:url('/static/images/v2/bl_head.gif') no-repeat 10px 0;
+  font-weight: bold;
+}
+
+.top_bl{
+  padding: 10px;
+  background:url('/static/images/v2/bl_head.gif') no-repeat center 0;
+  font-weight: bold;
+}
+
+.clientNpartner{
+  border-bottom: 1px solid #eee;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  a{
+    font-weight: bold;
+    color: #444;
+    text-decoration: underline;
+  }
+
+}
+
+.sns_part{
+  margin-top: 25px;
+  a{
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    text-indent: -999em;
+    display: inline-block;
+    background:url('/static/images/icon/ico_sns.gif') no-repeat 0 0;
+  }
+
+  .btn_fb{
+    background-position: -54px 0;
+  }
+  .btn_insta{
+    background-position: -104px 0;
+  }
+  .btn_blog{
+    background-position: -154px 0;
+  }
+  .btn_youtube{
+    background-position: -204px 0;
+  }
+  .btn_plus{
+    background-position: -258px 0;
+  }
+}
+
+
+.video_list_m{
+  padding: 0;
+  li.list_wrap{
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+  }
+  a.link_video{
+    padding: 15px 25px 15px 15px;
+    color: #444;
+    font-size: 14px;
+    display: block;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .active{
+    background:#b2e2f8;
+  }
+
+  i.glyphicon{
+    position: absolute;
+    right: 5px;
+    top: auto;
+  }
+}
+
+// 가장 큰 뷰포트의 경우 썸네일이 깨지는 현상을 방지한다.
+@media (min-width:1200px) {
+  .img_sp_item{
+    //max-height: 100%;
+    max-height: 200px;
+  }
+}
+
+.sp_list{
+
+  .title{
+    color: #7d7d7d;
+    font-size: 17px;
+    display: block;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+}
+
+
+.special{
+  border-bottom: 1px solid #eee;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+.sp_link{
+  display: block;
+  padding-left: 150px;
+  height: 90px;
+  position: relative;
+}
+
+.img_thumbnail{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.year{
+  font-size: 13px;
+  color: #666;
+  margin-left: 5px;
+}
+
+.btn-car-more{
+  display: block;
+  color: #7d7d7d;
+  padding: 10px 0;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.link_special{
+  border: 1px solid #eee;
+  background: #fff;
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  .tit{
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    color: #444;
+    padding: 5px 10px 5px 10px;
+  }
+  .price{
+    font-size: 17px;
+    font-weight:bold;
+    color: #333;
+    margin-left: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    display: inline-block;
+  }
+  .detail{
+    position: relative;
+    padding: 0 5px;
+    display: block;
+  }
+}
+
+.link_special:hover{
+  text-decoration: none;
+}
+
+.label-hot{
+  position: relative;
+  top: -3px;
+}
+

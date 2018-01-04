@@ -1,0 +1,2268 @@
+.container_p{
+  position: relative;
+
+  .main-bg{
+    background:url('/static/images/desktop/bg_main_01.jpg') center 0 no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 450px;
+    width: 100%;
+    position: relative;
+    z-index: 980;
+  }
+
+  .header_p{
+    height: 60px;
+    background: $main-key-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .header_inner{
+    position: relative;
+    width: $pc_width;
+    margin: 0 auto;
+  }
+
+  .logo{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+  }
+
+  .footer_menu{
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    background: #fdfdfd;
+    height: 50px;
+  }
+
+  .ft_nav,.ft_info_nav{
+    width: $pc_width;
+    margin: 0 auto;
+  }
+
+  .ft_info{
+    position: relative;
+    background: #fdfdfd;
+    padding-top: 20px;
+    padding-bottom: 100px;
+  }
+
+  .ft_list_nav{
+    padding: 0;
+    line-height: 50px;
+
+    li{
+      float: left;
+      list-style: none;
+    }
+    a{
+      display: inline-block;
+      color: #666;
+      font-size: 14px;
+    }
+    .split{
+      color :#eceeec;
+      padding:0 20px;
+    }
+  }
+
+
+  .ft_info_nav{
+    width: $pc_width;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 135px;
+  }
+
+  .ft_logo{
+    position: absolute;
+    top: -20px;
+    left: 0;
+  }
+
+  .addr{
+    padding: 0;
+    list-style: none;
+    li{
+      color: #666;
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+    .split{
+      color: #e1e4e1;
+      padding: 0 10px;
+      font-size: 12px;
+    }
+  }
+
+  .copyright{
+    margin-top: 20px;
+    color: #666;
+  }
+
+  .ad_part{
+    position: relative;
+    margin-top: -120px;
+    z-index: 990;
+  }
+
+
+  .ad_list{
+    width: 750px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    li{
+      float:left
+    }
+    a{
+      display: inline-block;
+    }
+  }
+
+
+  .sp_row{
+    width: $pc_width;
+    margin: 0 auto;
+  }
+
+  .txt-head{
+    padding-bottom: 15px;
+    padding-top: 30px;
+    width: $pc_width;
+    margin: 0 auto;
+    font-size: 22px;
+    .txt-sm{
+      font-size: 14px;
+      color: #999;
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+
+  .footer_p{
+    margin-top: 100px;
+  }
+
+  .item-link:hover{
+    text-decoration: none;
+    .cover,.desc{
+      display: block !important;
+    }
+    .txt_soldout{
+      display: block;
+    }
+    .link_sold_req{
+      display: block;
+    }
+  }
+
+  .item-link{
+    position: relative;
+    width: 204px;
+    display: block;
+    color: #666;
+    text-align: left;
+
+    .info{
+      border: 1px solid #e6e6e6;
+      border-top: none;
+      display: block;
+      padding: 10px;
+      position: relative;
+      // top: -1px;
+    }
+
+    .title{
+      display: block;
+    }
+
+    .model{
+      font-size: 15px;
+      color: #333;
+      display: block;
+      // padding-bottom: 10px;
+      height: 50px;
+    }
+
+    .spec{
+      font-size: 13px;
+      color :#666;
+      display: block;
+    }
+
+    .price{
+      display: block;
+      font-size: 13px;
+      color :#666;
+    }
+
+    .meter{
+      padding: 5px 0 10px 0;
+      display: block;
+    }
+
+    .s_price{
+      display: block;
+      font-size: 18px;
+      color :#ff3600;
+    }
+
+    .car_thumbnail{
+      border: 1px solid #e6e6e6;
+      border-bottom: none;
+    }
+
+    .remain_day{
+      position: absolute;
+      bottom: 25px;
+      right: 0;
+      width: 55px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 16px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .txt-deadline{
+      font-size: 13px;
+      position: absolute;
+      bottom: 2px;
+      right: 0;
+      width: 55px;
+      height: 20px;
+      line-height: 20px;
+      color: #d91a21;
+      text-align: center;
+    }
+
+    .sm-txt{
+      font-size: 13px;
+    }
+    .sm-txt-black{
+      font-size: 13px;
+      color: #666;
+    }
+
+    .img_won{
+      position: relative;
+      top: -2px;
+    }
+
+    .cover{
+      display: none !important;
+      position: absolute;
+      top:0;
+      left:0;
+      display: block;
+      width: 204px;
+      height: 128px;
+      background: #000;
+      opacity: 0.6;
+      z-index: 10;
+    }
+
+    .desc{
+      display: none !important;
+      z-index: 15;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 204px;
+      height: 128px;
+      padding: 10px;
+      color: #fff;
+    }
+
+    .cover_cross{
+      background: #000 url('/static/images/desktop/ico/ico_cross.gif') no-repeat center center !important;
+    }
+  }
+
+  .btn-more-item{
+    border: 1px solid #f00;
+    width: 272px;
+    height: 52px;
+    line-height: 52px;
+    display: block;
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+    margin: 0 auto 20px auto;
+    color: #333;
+    font-size: 15px;
+  }
+
+  .btn-more-item:hover{
+    border-color: #00a0e9;
+    text-decoration: none;
+    color: #00a0e9;
+  }
+
+  .through{
+    text-decoration: line-through;
+  }
+}
+
+
+.search_area{
+  padding-top: 110px;
+  background: #f9f9f9;
+}
+
+.search_area_inner{
+  height: 300px;
+  width: $pc_width;
+  margin: 0 auto;
+  background: url('/static/images/main/bg_spot_chadaeli.gif') right 0 no-repeat;
+  .txt{
+    margin-top: 25px;
+  }
+}
+
+.field-search{
+  margin-top: 60px;
+  height: 45px;
+  width: 220px;
+  padding: 0 10px;
+  border: none;
+  background:#f9f9f9;
+  font-size: 15px;
+  color: #959595;
+}
+
+.btn-search-item{
+  position: relative;
+  top: 10px;
+  left: 5px;
+}
+
+.form-search{
+  width: 300px;
+  border-bottom: 2px solid #00a0e9;
+}
+
+.special_part{
+
+  .tips{
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    font-weight: normal;
+
+    .ico_tail{
+      width: 14px;
+      height: 16px;
+      background: url('/static/images/mobile/ico_tail.gif') no-repeat;
+      display: inline-block;
+      position: absolute;
+      top: -2px;
+      right: 85px;
+      z-index: 101;
+    }
+
+    .desc{
+      position: absolute;
+      top: -26px;
+      right: 97px;
+      border: 1px solid #00a0e9;
+      background: #e1f4fd;
+      padding: 7px;
+      display: inline-block;
+      width: 450px;
+      z-index: 100;
+      font-size: 13px;
+      color: #666;
+      line-height: 16px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.col-item-5{
+  width: 204px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+.col-item-5:nth-child(5n){
+  margin-right: 0;
+}
+
+
+.nav_list{
+  position: absolute;
+  left: 240px;
+  top: 22px;
+  padding: 0;
+
+  li.nav_list_ls{
+    float: left;
+    list-style: none;
+    margin-right: 15px;
+    min-width: 64px;
+    position: relative;
+  }
+
+  li.nav_list_ls:hover{
+    .sub_nav_list{
+      display: block;
+    }
+  }
+
+  li:last-child{
+    margin-right: 0;
+  }
+
+  a.nav_list_link{
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    min-width: 62px;
+    height: 38px;
+    // padding-left: 40px;
+    // border: 1px solid #f00;
+    text-align: center;
+    width: 80px;
+  }
+
+  a.active{
+    font-weight: bold;
+  }
+
+  a.nav_list_link:hover{
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+.search-box{
+  position: absolute;
+  right: 0;
+  top: 12px;
+  width: 200px;
+
+  .search-input{
+    width: 200px;
+    height: 35px;
+    padding-left: 10px;
+    padding-right: 40px;
+    font-size: 13px;
+    line-height: 35px;
+    color: #666;
+    // border-color: #fff;
+    background: #fff;
+  }
+
+  .frm-search{
+    position: relative;
+  }
+
+  .btn-search-input{
+    position: absolute;
+    top: 0;
+    right: -1px;
+  }
+}
+
+@media (min-width: 1480px) {
+  .wing-wrap {
+    display: block !important;
+  }
+}
+
+.wing-wrap{
+  display: none;
+  position: relative;
+  width: $pc_width;
+  margin: 0 auto;
+  height: 1px;
+  z-index: 10;
+}
+
+.wing-right{
+  position: absolute;
+  top : 130px;
+  right : -200px;
+  width: 180px;
+}
+
+.item_info_count{
+  width: 180px;
+  height: 207px;
+  background: url('/static/images/desktop/bg_count_info.png') no-repeat 0 top;
+}
+
+.info_entire{
+  padding-top: 87px;
+  font-size: 14px;
+  span{
+    font-size: 17px;
+  }
+}
+
+.info_registered{
+  padding-top: 20px;
+  font-size: 14px;
+  span{
+    font-size: 17px;
+  }
+}
+
+.promote_ch{
+  margin-top: 15px;
+  padding: 0;
+  list-style: none;
+  .promo_li{
+    list-style: none;
+    float: left;
+    width: 90px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .promo_link{
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+  }
+}
+
+.query_list{
+  margin-top: 10px;
+}
+
+.cloud_nav{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: #464c58;
+
+}
+
+.cloud_nav_inner{
+  height: 52px;
+  width: $pc_width;
+  margin: 0 auto;
+  position: relative;
+  border-top: 1px solid #3d424e;
+  border-bottom: 1px solid #3d424e;
+}
+
+.nav_in_cloud{
+  padding: 0;
+  li{
+    position: relative;
+    float: left;
+    list-style: none;
+    height: 52px;
+  }
+  .count{
+    position: relative;
+    top: -2px;
+  }
+  .txt{
+    position: relative;
+    top: 2px;
+  }
+}
+
+.sub_nav_chat{
+  display: none !important;
+  padding: 0;
+  background: #2b3d64;
+  position: absolute;
+  top: -80px;
+  display: block;
+  li{
+    position: relative;
+    width: 179px;
+    height: 40px;
+    line-height: 40px;
+  }
+  .ico-arrow-end{
+    top: 13px;
+  }
+}
+
+.link-chat-each:hover{
+  text-decoration: none;
+}
+
+.first-line,
+.second-line
+{
+  width: 180px;
+  border-right: 1px solid #323641;
+  display: inline-block;
+  line-height: 26px;
+}
+
+
+.third-line{
+  border-right: 1px solid #323641;
+  background: #3e578e;
+  line-height: 52px;
+  width: 180px;
+}
+
+
+.list_chat{
+  border-right: 1px solid #323641;
+  width: 179px;
+  line-height: 52px;
+  background: #3e578e;
+  position: relative;
+}
+
+.list_chat:hover{
+  .sub_nav_chat{
+    display: block !important;
+  }
+}
+
+.list_reserve{
+  border-right: 1px solid #323641;
+  width: 179px;
+  line-height: 52px;
+}
+
+.list_load{
+  border-right: 1px solid #323641;
+  width: 179px;
+  line-height: 52px;
+}
+
+
+.panel_count{
+  width: 360px;
+  height: 51px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background: url('/static/images/desktop/img_vehicle_panel.png') no-repeat 0 0;
+}
+
+.link-chat{
+  position: relative;
+
+}
+
+.ico-arrow-end{
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+
+.icon-front{
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  display: inline-block;
+}
+
+.icon-live-chat{
+  width: 24px;
+  height: 22px;
+  background: url('/static/images/desktop/ico_sm_chat.png') no-repeat 0 0;
+}
+
+.icon-reserve{
+  top: 13px;
+  width: 24px;
+  height: 23px;
+  background: url('/static/images/desktop/ico_sm_reserve.png') no-repeat 0 0;
+}
+
+.icon-loan{
+  top: 10px;
+  width: 30px;
+  height: 27px;
+  background: url('/static/images/desktop/ico_sm_loan.png') no-repeat 0 0;
+}
+
+.icon-plus-chingu{
+  top: 7px;
+  width: 26px;
+  height: 26px;
+  background: url('/static/images/desktop/ico_sm_pulchin.png') no-repeat 0 0;
+}
+
+.icon-taktak{
+  top: 7px;
+  width: 26px;
+  height: 26px;
+  background: url('/static/images/desktop/ico_sm_taktak.png') no-repeat 0 0;
+}
+
+.plus-friend{
+  border-bottom: 1px solid #3b414d;
+  border-top: 1px solid #3b414d;
+}
+
+.hot_spot{
+  //padding-top: 85px;
+  padding-top: 30px;
+
+  .videos{
+    float: left;
+    width: 735px;
+    height: 433px;
+  }
+
+  .event_part{
+    float: left;
+    width: 324px;
+    margin-left: 20px;
+  }
+
+  .spot_inner{
+    width: $pc_width;
+    margin: 0 auto;
+  }
+
+  h3.tit{
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+    color: #000;
+  }
+
+  .event_list,.video-display{
+    margin-top: 10px;
+  }
+
+  .link-evt{
+    margin-bottom: 21px;
+    display: block;
+  }
+}
+
+.video-ls{
+  width: 160px;
+  float: left;
+  padding: 0;
+
+  .video-li{
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  .active{
+    .cover{
+      display: block;
+    }
+  }
+
+  .caption,.bg_caption{
+    width: 160px;
+    height: 91px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .bg_caption{
+    z-index: 90;
+    background: #000;
+    opacity: 0.6;
+    display: none;
+  }
+
+  .caption{
+    z-index: 100;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    display: none;
+  }
+
+}
+
+.video-view{
+  float: left;
+  width: 555px;
+  margin-left: 20px;
+  border: 1px solid #cecece;
+
+  .player{
+    display: block;
+    height: 313px;
+  }
+
+  .title{
+    height: 64px;
+    padding: 0 20px;
+    line-height: 64px;
+    font-size: 16px;
+    color: #000;
+    border-top: 1px solid #cecece;
+
+  }
+
+}
+
+.video-more{
+  border: 1px solid #e3e3e3;
+  list-style: none;
+}
+
+.more-link-video{
+  width: 160px;
+  height: 45px;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  line-height: 45px;
+}
+
+.video-link{
+  width: 160px;
+  height: 91px;
+  display: inline-block;
+  position: relative;
+
+  .cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 160px;
+    height: 91px;
+    border: 4px solid #00a0e9;
+    display: none;
+  }
+}
+
+.video-link:hover{
+  .caption,.bg_caption{
+    display: block;
+  }
+}
+
+.item_all{
+  padding-top: 40px;
+  min-height: 850px;
+  position: relative;
+  width: $pc_width;
+  margin: 30px  auto 0 auto;
+
+  .btnAreaReserve{
+    top: 62px;
+  }
+}
+
+.empty_data{
+  min-height: 850px;
+  width: $pc_width;
+  margin: 0 auto;
+}
+
+.search_result{
+  min-height: 850px;
+  padding-top: 40px;
+}
+
+.result-heading{
+  border-bottom: 2px solid #414753;
+  color: #414753;
+  margin-top: 30px !important;
+  margin-bottom: 40px !important;
+  position: relative;
+}
+
+.empty-heading{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.btn-reserve-item{
+  font-size: 14px;
+  background: #00a0e9;
+  border-color: #00a0e9;
+}
+
+.btn-reserve-item:hover{
+  background: #0098e1;
+  border-color: #0098e1;
+}
+
+.btnAreaReserve{
+  position: absolute;
+  right: 0;
+  top: 24px;
+}
+
+.empty-txt{
+  padding: 80px 0;
+}
+
+.ico-flag-cg{
+  width: 30px;
+  height: 44px;
+  z-index: 15;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: inline-block;
+  background: url('/static/images/desktop/ico/ico_cg.png') no-repeat 0 0;
+}
+
+
+.ico_soldout{
+  z-index: 15;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.txt_soldout{
+  z-index: 15;
+  position: absolute;
+  top: 60px;
+  right: 41px;
+  color: #fff;
+  font-size: 14px;
+  display: none;
+}
+
+.link_sold_req{
+  display: none;
+  z-index: 15;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.ico_badge{
+  z-index: 15;
+  position: absolute;
+  top: 105px;
+  left: 5px;
+  background: #00a0e9;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.btm-line{
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px !important;
+
+  .txt-head{
+    padding-top: 0;
+  }
+}
+
+.ico_negotiate{
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  width: 63px;
+  height: 21px;
+  display: inline-block;
+  background: url('/static/images/desktop/ico/ico_discount.gif') no-repeat 0 0;
+}
+
+.txt_price{
+  font-size: 14px;
+  color: #000;
+}
+
+.banner_area{
+  width: $pc_width;
+  margin: 0 auto;
+  .ban_list{
+    padding: 0;
+    list-style: none;
+    li{
+      float: left;
+    }
+  }
+  .txt{
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 20px;
+  }
+  .ban_link{
+    position: relative;
+  }
+}
+
+.magazine{
+  .btn-reserve-item{
+    position: relative;
+    top: -5px;
+  }
+}
+
+.ban_broadcasting{
+  width: 346px;
+  height: 70px;
+  border: 1px solid #cecece;
+  background: #dee9ee;
+  position: relative;
+  .txt-broadcast{
+    position: absolute;
+    top: 12px;
+    left: 15px;
+  }
+  .btn-fb-broadcast{
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    background: #2556a1;
+    line-height: 70px;
+    position: absolute;
+    top: 0;
+    right: 70px;
+  }
+  .btn-yt-broadcast{
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    background: #e02a26;
+    line-height: 70px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.banner_by_section{
+  width: 1080px;
+  margin: 0 auto 20px auto;
+}
+
+.big_main_banner_area{
+  width: 1080px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.ban_evt_area{
+  width: 1080px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.main_start_price{
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.campaign_chadaeli{
+  width: 1080px;
+  margin: 70px auto 0 auto;
+
+  .compaign{
+    width: 750px;
+    float: left;
+  }
+  .chadaeli_tv{
+    width: 315px;
+    float: left;
+    margin-left: 15px;
+  }
+
+  .c_head{
+    font-size: 22px;
+  }
+
+
+
+  .tv_list{
+    padding: 0;
+    li.tv_li{
+      list-style: none;
+      margin-bottom: 5px;
+    }
+    .tv_link{
+      position: relative;
+      display: block;
+      height: 80px;
+      padding-left: 120px;
+      color: #333;
+      font-size: 17px;
+    }
+    .tv_link:hover{
+      color: #00a0e9;
+    }
+    .tv_thumbnail{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .link-view{
+      font-size: 13px;
+      color: #c3c3c3;
+      position: absolute;
+      bottom: 10px;
+      left: 125px;
+    }
+  }
+}
+
+.sub_slider_menu{
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: #fff;
+  z-index: 999;
+  border: 3px solid $main-key-color;
+}
+
+.sub_nav_list{
+  display: none;
+  position: absolute;
+  top: 37px;
+  left: -12px;
+  border: 2px solid $main-key-color;
+  border-top:1px solid #fff;
+  width: 100px;
+  text-align: center;
+  padding: 0;
+  background: #fff;
+
+
+  li.sub_nav_list_ls{
+    list-style: none;
+  }
+  a.sub_nav_link{
+    color: $main-key-color;
+    padding: 5px 0;
+    display: block;
+  }
+  a.sub_nav_link:hover{
+    font-weight: normal;
+  }
+}
+
+.chadaeli_p{
+  padding-top: 80px;
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+
+.img_chadaeli{
+  width: 100%;
+}
+
+.partnership{
+  width: 1080px;
+  margin: 100px auto 0 auto;
+}
+
+.direct_images{
+  margin-top: 50px;
+  text-align: center;
+
+  .img_wrap{
+    // text-align: center;
+    //width: 530px;
+    //height: 510px;
+    //float: left;
+    //margin-bottom: 20px;
+    //overflow: hidden;
+    //text-align: center;
+    //background: #eee;
+    //vertical-align: middle;
+  }
+
+  //.img_wrap:nth-child(odd){
+  //  margin-right: 20px;
+  //}
+
+  .item_images{
+    display: inline-block;
+    margin-bottom: 10px;
+    max-width: 800px;
+    // width: 600px;
+    //height: 510px;
+  }
+
+}
+
+.ban_pc_partner{
+  margin: 20px auto 0 auto;
+  width: 1080px;
+
+
+  .ban_partner_link{
+    float: left;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .ban_partner_livethecar{
+    float: left;
+    display: inline-block;
+  }
+
+}
+
+.ban_chadaeli_pc{
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+
+.item_price_only{
+  width: 140px;
+  display: inline-block;
+
+  .startText{
+    font-size: 14px;
+    color: #666;
+  }
+
+  .startUnit{
+    font-size: 14px;
+    color :#000;
+    font-weight: bold;
+  }
+
+  .startPrice{
+    color: #ff3600;
+    font-size: 20px;
+  }
+}
+
+.amount_price_sub{
+  width: 180px;
+  padding-left: 20px;
+  border-left: 1px solid #d9d9d9;
+}
+
+.price_section_sub{
+  margin-top: 25px;
+}
+
+// sub page design for PC
+.sub_detail_main{
+  position: relative;
+  padding-top: 50px;
+  .image_viewer{
+    width: 680px;
+    margin-right: 20px;
+    float: left;
+  }
+
+  .item_simple_info{
+    width: 380px;
+    float: left;
+    height: 100%;
+  }
+
+  .req_info{
+    border-top: 1px solid #080808;
+    padding-top: 15px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+
+  .req_talktalk{
+    margin: 0 5px;
+  }
+
+  .req{
+    float: left;
+  }
+
+  .req_lowprice_wrp{
+    position: absolute;
+    top: -55px;
+    width: 100%;
+  }
+
+  .btn_low_price{
+    padding: 15px 25px;
+    height: 50px;
+    line-height: 25px;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    background: #00a0e9;
+    border-radius: 20px;
+  }
+}
+
+
+.txt_start_price{
+  color: #666;
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+
+.container_p{
+  .basic_info{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .chadaeli_guarantee{
+    margin-right: 20px;
+  }
+
+  .dealer_info{
+    width: 525px;
+    min-height: 300px;
+    padding-top: 25px;
+  }
+
+  .sub_detail{
+    width: 1080px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+  }
+}
+
+.sub_detail{
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 50px;
+  background: #fff;
+
+
+  .info-btn-area{
+    padding: 0 10px 5px 10px;
+  }
+
+  .btn-blog-info{
+    width: 100%;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background: #ff7100;
+  }
+
+  .imgs_area{
+    position: relative;
+  }
+
+  .img_thumbnail{
+    width: 100%;
+  }
+
+  .ico_medal{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+  }
+
+
+
+  .item_info_pc{
+    position: relative;
+    padding: 0 15px 15px 15px;
+
+    .tit{
+      font-size: 20px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .ico_sold{
+      color: #ff3600;
+      border-color: #ff3600;
+    }
+
+    .btn_alert_item{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+  }
+
+  //.price{
+  //  position: absolute;
+  //  top: 20px;
+  //  right: 15px;
+  //
+  //  .txt{
+  //    font-size: 14px;
+  //    color: #666;
+  //  }
+  //  .unit{
+  //    color: #333;
+  //    font-size: 15px;
+  //    font-weight: bold;
+  //  }
+  //  .amount{
+  //    font-size: 22px;
+  //    color: #ff3600;
+  //  }
+  //}
+
+  .price_pc{
+    display: block;
+    margin-top: 30px;
+
+    .txt{
+      font-size: 14px;
+      color: #666;
+    }
+    .unit{
+      color: #333;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .amount{
+      font-size: 22px;
+      color: #ff3600;
+    }
+  }
+
+  .split{
+    color: #c6c6c6;
+    font-size: 11px;
+    position: relative;
+    top: -1px;
+    padding: 0 3px;
+  }
+
+  .info{
+    color: #666;
+    font-size: 14px;
+  }
+
+  .basic_info{
+    padding-top: 30px;
+
+
+    .table_info{
+      th{
+        width: 35% !important;
+      }
+      td{
+        width: 65% !important;
+      }
+    }
+
+    .customer_req{
+      padding: 10px 0;
+    }
+
+    .empty{
+      text-align: center;
+      color: #666;
+      font-size: 16px;
+      padding: 140px 0 40px;
+      background: url('/static/images/icon/ico_empty.gif') no-repeat center 30px;
+    }
+
+    .tit{
+      font-size: 18px;
+      padding: 0 0 10px 0;
+      margin: 0 0 10px 0;
+      border-bottom: 2px solid #000;
+      text-align: left;
+    }
+
+    .txt{
+      color: #666;
+      font-size: 14px;
+    }
+
+    .table{
+      margin: 0;
+      padding: 0;
+      th,td{
+        border-top: none;
+        font-size: 13px;
+        width: 25%;
+      }
+      th{
+        color: #666;
+      }
+      td{
+        color: #333;
+      }
+    }
+
+    .glyphicon{
+      position: relative;
+      top: 1px;
+      font-size: 12px;
+    }
+  }
+
+  .btn-view-performance{
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color :#666;
+    border: 1px solid #a8a8a8;
+    height: 40px;
+    line-height: 40px;
+  }
+
+
+  .evt_area{
+    padding: 0 15px 15px 15px;
+  }
+
+  .evt_area_pc{
+    padding: 0;
+  }
+
+  .ban_evt_direct{
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
+  }
+
+  .tb_option{
+    td{
+      padding-top: 0;
+      vertical-align: bottom !important;
+    }
+  }
+
+  .car_performance{
+    position: relative;
+    width: 300px;
+    margin: 0 auto 20px auto;
+  }
+
+  .performance{
+    .txt{
+      margin-top: 5px;
+      padding: 0 5px;
+    }
+  }
+
+  .iframe_video_dealer{
+    width: 100%;
+  }
+}
+
+.guarantee_section{
+  margin-top: 20px;
+}
+
+.req_info{
+  a.req{
+    margin-bottom: 4px;
+    display: inline-block;
+  }
+}
+
+
+.start_price{
+  padding: 10px;
+  border: 1px solid #eee;
+  margin-top: 20px;
+  background: #fbfbfb;
+  color: #666666;
+  font-size: 14px;
+}
+
+.tb_store_info{
+  margin-left: 20px;
+  max-width: 550px;
+  th,td{
+    font-size: 18px;
+    padding: 10px 35px;
+  }
+  th{
+    background: url('/static/images/sub/bl_circle_blue.gif') no-repeat left center;
+  }
+  td{
+    text-align: left;
+    padding-left: 10px;
+  }
+}
+
+.home_link_area{
+  margin-top: 40px;
+}
+
+.special_store_badge{
+  background: url('/static/images/sub/badge_special_store.jpg') no-repeat 360px 25px;
+}
+
+.general_store_badge{
+  background: url('/static/images/sub/badge_general_store.jpg') no-repeat 380px 25px;
+}
+
+.item_basic_info_sub,.performance_history_section{
+  width: 530px;
+  float: left;
+  margin-right: 20px;
+}
+
+.item_option_info_sub,.dealer_note{
+  width: 530px;
+  float: left;
+}
+
+.notes_info{
+  width: 512px;
+  height: 360px;
+  overflow-y: auto;
+  color: #333;
+  font-size: 15px;
+  padding: 50px;
+  background: url('/static/images/sub/bg_dealer_note.gif') no-repeat 0 0;
+  text-align: left;
+  white-space: pre-line;
+}
+
+
+.pc_livecar_chadaeli{
+  width: 1080px;
+  margin: 30px auto 0 auto;
+}
+
+/* renewal v2.0 */
+
+.top_spot{
+  padding-top: 98px;
+  @include layout-align-center($pc_width);
+
+  .chadaeli_news{
+    width: 642px;
+    float: left;
+  }
+  .chadaeli_campaign{
+    width: 423px;
+    float: left;
+    margin-left: 15px;
+  }
+
+  .tit{
+    font-size: 20px;
+    padding: 0 0 20px 0;
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .desc{
+    margin-left: 15px;
+    font-size: 14px;
+    color: #666;
+  }
+}
+
+
+.chadaeli-campagin{
+  .swiper-pagination-bullet-active{
+    background: $main-key-color !important;
+  }
+
+  .swiper-button-prev{
+    width: 35px;
+    height: 35px;
+    left: 0 !important;
+    overflow: hidden;
+    background: url('/static/images/campaign/bg_btn_campaign.png') no-repeat 0 0;
+  }
+
+  .swiper-button-next{
+    width: 35px;
+    height: 35px;
+    right: 0 !important;
+    overflow: hidden;
+    background: url('/static/images/campaign/bg_btn_campaign.png') no-repeat -35px 0;
+  }
+}
+
+.affiliate_brand{
+  padding-top: 30px;
+  @include layout-align-center($pc_width);
+  .tit{
+    font-size: 20px;
+    padding: 0 0 20px 0;
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .desc{
+    margin-left: 15px;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .brand-list-link{
+    margin-right: 16px;
+    float: left;
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+  .brand-list-link:nth-child(4n){
+    margin-right: 0;
+  }
+
+}
+
+.green_store_wrp{
+  margin-top: 40px;
+  padding: 37px 0 50px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+
+  .green_store_center{
+    position: relative;
+    @include layout-align-center($pc_width);
+
+
+    .store-prev,.store-next{
+      position: absolute;
+      top: 0;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      overflow: hidden;
+      background: url('/static/images/desktop/bg_btn_store_select.gif') no-repeat 0 0;
+      text-indent: -999em;
+    }
+
+    .store-prev{
+      right: 40px;
+    }
+
+    .store-next{
+      right: 10px;
+      background-position: -30px 0;
+    }
+
+
+  }
+
+  .tit{
+    font-size: 20px;
+    padding: 0 0 20px 0;
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .desc{
+    margin-left: 15px;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .store-list-wrp{
+    float: left;
+    width: 204px;
+    margin-right: 17px;
+    position: relative;
+  }
+
+  .store-list-wrp:last-child{
+    margin-right: 0;
+  }
+
+  .store-list-link{
+    display: inline-block;
+  }
+
+  .store_badge{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+
+  .special_badge{
+    position: absolute;
+    bottom: 10px;
+    right: -5px;
+    z-index: 30;
+  }
+
+  .store-list-wrp:hover{
+    .bg_store{
+      display: block;
+    }
+    .btn-go-micro{
+      display: inline-block;
+    }
+    .btn-go-micro-txt{
+      display: block;
+    }
+  }
+
+  .bg_store{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    display: none;
+  }
+
+  .btn-go-micro{
+    position: absolute;
+    bottom: 20px;
+    left: 32px;
+    z-index: 30;
+    display: none;
+  }
+  
+  .btn-go-micro-txt{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 13px;
+    color: #fafafa;
+    z-index: 30;
+    display: none;
+  }
+
+}
+
+
+.chadaeli-graph{
+  @include layout-align-center($pc_width);
+  margin-top: 39px;
+
+  .graph-01{
+    background-position: 0 0 !important;
+    .tit{
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 18px;
+      color: #333;
+      line-height: 24px;
+    }
+  }
+  .graph-02{
+    background-position: -350px 0 !important;
+    .tit{
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 18px;
+      color: #333;
+      line-height: 24px;
+    }
+  }
+  .graph-03{
+    background-position: -700px 0 !important;
+    .tel-info{
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+      margin: 30px 0 0 0;
+      padding: 0;
+    }
+
+    .tel-info-2{
+      text-align: center;
+      .txt{
+        font-size: 14px;
+        color: #333;
+      }
+      .num{
+        color: $main-key-color;
+        font-size: 26px;
+      }
+    }
+
+    .sns_collection{
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .s-icon{
+      margin-right: 10px;
+      width: 35px;
+      height: 35px;
+      overflow: hidden;
+      background: url('/static/images/desktop/ico/bg_sns_icon.jpg') no-repeat;
+      display: inline-block;
+    }
+
+    .s-icon:last-child{
+      margin-right: 0;
+    }
+
+    .ico_sns_tak{
+      background-position: -35px 0;
+    }
+
+    .ico_sns_fb{
+      background-position: -70px 0;
+    }
+
+    .ico_sns_insta{
+      background-position: -105px 0;
+    }
+
+    .ico_sns_yb{
+      background-position: -140px 0;
+    }
+
+    .ico_sns_blog{
+      background-position: -175px 0;
+    }
+
+  }
+
+  .chadaeli-graph-box{
+    position: relative;
+    width: 350px;
+    height: 165px;
+    margin-right: 15px;
+    float: left;
+    overflow: hidden;
+    background: url('/static/images/desktop/bg_chadaeli_graph.jpg') no-repeat;
+  }
+
+  .chadaeli-graph-box:last-child{
+    margin-right: 0;
+  }
+
+  .item-all{
+    position: absolute;
+    right: 20px;
+    top: 0;
+    font-size: 24px;
+    text-align: right;
+    line-height: 26px;
+    color: $main-key-color;
+    .title{
+      font-size: 16px;
+      color: #333;
+    }
+  }
+
+  .item-guarantee{
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    font-size: 24px;
+    text-align: right;
+    line-height: 26px;
+    color: $main-key-color;
+    .title{
+      font-size: 16px;
+      color: #333;
+    }
+  }
+
+  .unit{
+    font-size: 13px;
+    color: #333;
+    font-weight: normal;
+  }
+
+  .orange-color{
+    .num{
+      color: $main-orange-color;
+    }
+  }
+
+}
+
+
+.category_list{
+  @include layout-align-center($pc_width);
+  margin-top: 40px;
+
+
+  .tit{
+    font-size: 20px;
+    padding: 0 0 20px 0;
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .desc{
+    margin-left: 15px;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .cate_wrp{
+    position: relative;
+    height: 800px;
+  }
+
+  .cate_01,.cate_02,.cate_03,
+  .cate_04,.cate_05,.cate_06,
+  .cate_07,.cate_08,.cate_09,.cate_10
+  {
+    display: inline-block;
+    position: absolute;
+  }
+
+  // Collection each point in banners
+  .cate_01{
+    top: 0;
+    left: 0;
+  }
+
+  .cate_05{
+    top: 406px;
+    left: 0;
+  }
+
+  .cate_02{
+    top: 0;
+    left: 438px;
+  }
+
+  .cate_03{
+    top: 0;
+    left: 767px;
+  }
+
+  .cate_04{
+    top: 202px;
+    left: 438px;
+  }
+
+  .cate_05{
+    top: 202px;
+    left: 767px;
+  }
+
+  .cate_06{
+    top: 406px;
+    left: 0;
+  }
+
+  .cate_07{
+    top: 406px;
+    left: 438px;
+  }
+
+  .cate_08{
+    top: 609px;
+    left: 0;
+  }
+
+  .cate_09{
+    top: 609px;
+    left: 438px;
+  }
+
+  .cate_10{
+    top: 609px;
+    left: 767px;
+  }
+}
+
+
+.carousel_plan_cate_05{
+  position: relative;
+  overflow: hidden;
+  width: 313px;
+  height: 392px;
+}
+
+.swiper-item-plan{
+  position: relative;
+  .swiper-pagination2{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    height: 22px;
+    text-align: right;
+    z-index: 10;
+    padding-right: 10px;
+  }
+  .swiper-pagination-bullet-active{
+    width: 20px;
+    border-radius: 20px;
+  }
+}
+
+
+
+.category_price{
+  @include layout-align-center($pc_width);
+  margin-top: 15px;
+  border: 1px solid #dedede;
+
+
+  .price_title{
+    float:left;
+    width: 179px;
+    height: 55px;
+    text-align: center;
+    color: #fff;
+    background: #3d3535;
+    line-height: 55px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .price_list{
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  .price_list_li{
+    list-style: none;
+    display: inline-block;
+    float: left;
+    margin-left: 70px;
+  }
+
+  .price_list_link{
+    display: inline-block;
+    color: #c4c4c4;
+    height: 55px;
+    line-height: 55px;
+    font-size: 16px;
+  }
+
+  .price_list_link:hover{
+    color: $main-key-color;
+  }
+
+}
+
+.pc_livethercar{
+  @include layout-align-center($pc_width);
+  margin-top: 20px;
+  background: url('/static/images/desktop/bg_livethecar.jpg') no-repeat;
+  height: 160px;
+  position: relative;
+
+  .thumbnail_carousel_wrp{
+    position: absolute;
+    top: 0;
+    left: 212px;
+    width: 894px;
+    height: 148px;
+    overflow: hidden;
+  }
+
+  .live-prev,.live-next{
+    width: 20px;
+    height: 60px;
+    overflow: hidden;
+    position: absolute;
+    top: 48px;
+    background: url('/static/images/desktop/bg_btn_live.gif') no-repeat 0 0;
+  }
+
+  .live-prev{
+    left : 180px;
+    background-position: 0 0;
+  }
+
+  .live-next{
+    right : 6px;
+    background-position: -20px 0;
+  }
+}
+
+.store-carousel{
+  height: 130px;
+  overflow: hidden;
+}
+
+.livethecar-carousel{
+  width: 834px;
+  height: 125px;
+  overflow: hidden;
+  margin-top: 18px;
+}
+
+
+.livethecar_list{
+  margin-right: 15px;
+}
+
+.magazine-part{
+  @include layout-align-center($pc_width);
+  //margin-top: 40px;
+
+
+
+  .tit{
+    font-size: 20px;
+    padding: 0 0 20px 0;
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .desc{
+    margin-left: 15px;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .magazine-link{
+    float: left;
+    display: inline-block;
+    width: 270px;
+    height: 75px;
+    position: relative;
+    padding-left: 120px;
+    padding-right: 10px;
+    color: #333;
+    margin-bottom: 10px;
+    .title{
+      display: block;
+      padding-left: 10px;
+      font-size: 13px;
+    }
+    .indicator{
+      font-size: 11px;
+      color: #999;
+      // margin-left: 10px;
+      display: inline-block;
+    }
+  }
+
+  .mg_thumbnail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #efefef;
+  }
+
+}
+
+.magazine-list-wrp{
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding: 40px 0;
+  margin-top: 40px;
+}

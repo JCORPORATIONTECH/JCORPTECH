@@ -1,0 +1,67 @@
+<div class="header_p">
+  <div class="header_inner">
+    <h1 class="logo">
+      <a href="/" class="link_logo">
+        <img src="/static/images/desktop/img_logo.jpg" alt="중고차1등안전거래 차대리" />
+      </a>
+    </h1>
+
+    <ul class="nav_list clearfix">
+      <li class="nav_list_ls"><a href="#chadaeli" class="nav_list_link">차대리소식</a>
+        <ol class="sub_nav_list">
+          <!--<li class="sub_nav_list_ls"><a href="/about" class="sub_nav_link">차대리소개</a></li>-->
+          <li class="sub_nav_list_ls"><a href="http://blog.naver.com/chadaeli/221133468406" target="_blank" class="sub_nav_link">파트너모집</a></li>
+          <li class="sub_nav_list_ls"><a href="/magazine" class="sub_nav_link">TV&캠페인</a></li>
+        </ol>
+      </li>
+      <li class="nav_list_ls"><a href="#" class="nav_list_link">국산상품</a>
+        <ol class="sub_nav_list">
+          <li class="sub_nav_list_ls"><a href="/affiliate_item" class="sub_nav_link">전체</a></li>
+          <li class="sub_nav_list_ls"><a href="/unusual_item" class="sub_nav_link">특수&화물</a></li>
+        </ol>
+      </li>
+      <li class="nav_list_ls"><a href="#" class="nav_list_link">수입상품</a>
+        <ol class="sub_nav_list">
+          <li class="sub_nav_list_ls"><a href="/foreign_item" class="sub_nav_link">전체</a></li>
+          <li class="sub_nav_list_ls"><a href="/foreign_item/germany" class="sub_nav_link">독일3사</a></li>
+        </ol>
+      </li>
+      <li class="nav_list_ls"><a href="/special_item" class="nav_list_link">차대리인증</a></li>
+      <li class="nav_list_ls"><a href="#" class="nav_list_link">카테고리별</a>
+        <ol class="sub_nav_list">
+          <li class="sub_nav_list_ls"><a href="/event/new" class="sub_nav_link">신차급</a></li>
+          <li class="sub_nav_list_ls"><a href="/event/suv" class="sub_nav_link">SUV/RV</a></li>
+          <li class="sub_nav_list_ls"><a href="/event/smallcar" class="sub_nav_link">경차</a></li>
+          <li class="sub_nav_list_ls"><a href="/event/short_distance" class="sub_nav_link">동급대비갑</a></li>
+          <li class="sub_nav_list_ls"><a href="/event/dailycar" class="sub_nav_link">데일리카</a></li>
+          <li class="sub_nav_list_ls"><a href="/event/myfirstcar" class="sub_nav_link">생애 첫차</a></li>
+
+        </ol>
+      </li>
+      <li class="nav_list_ls"><a href="#" class="nav_list_link">금액대별</a>
+        <ol class="sub_nav_list">
+          <li class="sub_nav_list_ls"><a href="/event/price/5000" class="sub_nav_link">5000이상</a></li>
+          <li class="sub_nav_list_ls"><a href="/event/price/3000/5000" class="sub_nav_link">5000~3000</a></li>
+          <li class="sub_nav_list_ls"><a href="/event/price/2000/3000" class="sub_nav_link">3000~2000</a></li>
+          <li class="sub_nav_list_ls"><a href="/event/price/1000/2000" class="sub_nav_link">2000~1000</a></li>
+          <li class="sub_nav_list_ls"><a href="/event/price/500/1000" class="sub_nav_link">1000~500</a></li>
+          <li class="sub_nav_list_ls"><a href="/event/price/0/500" class="sub_nav_link">500이하</a></li>
+        </ol>
+      </li>
+    </ul>
+
+    {{! 서브 메뉴 }}
+    <!--<div class="sub_slider_menu">-->
+      <!--sub-slide-menu-->
+    <!--</div>-->
+
+    {{! 검색결과 처리 }}
+    <div class="search-box">
+      <form action="/search/item" method="post" class="frm-search">
+        <input type="text" name="searchWord" class="search-input" placeholder="상품검색" autocomplete="off" required />
+        <input type="image" src="/static/images/desktop/btn-search.gif" value="검색" class="btn-search-input" />
+        <input type="hidden" name="_csrf" value="{{csrfToken}}" />
+      </form>
+    </div>
+  </div>
+</div>

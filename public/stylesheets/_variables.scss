@@ -1,0 +1,7 @@
+$pc_width: 1080px;
+$main-key-color: #88c367;
+$main-orange-color: #eb6400;
+@mixin layout-align-center($width){
+  margin: 0 auto;
+  width: $width;
+}

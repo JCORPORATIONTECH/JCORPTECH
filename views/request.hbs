@@ -1,0 +1,80 @@
+<div class="m_container" style="background: #f0f0f0;padding-top: 35px;">
+  {{> hd}}
+
+  <div class="col-md-12" style="padding-top: 15px;">
+    <h3 class="heading">원하는 상품 문의하기<br />
+      <small>원하시는 상품은 어떤 것이든 차대리가 직접 차주와 연결해드립니다.</small>
+    </h3><br />
+    <form action="/request/to/chadaeli" method="post" id="form_request">
+      <fieldset>
+        <div class="form-group">
+          <label for="customer_name">고객님의 성명을 기입해주세요.</label>
+          <input type="text"
+                 name="name"
+                 class="form-control"
+                 id="customer_name"
+                 aria-describedby="nameHelp"
+                 placeholder="고객님의 성명을 기입해주세요."
+                 autocomplete="off"
+                 required
+                 maxlength="10" autofocus />
+          <small id="nameHelp" class="form-text text-muted">* 고객님의 소중한 정보를 외부에 유출하지 않습니다.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="customer_tel">고객님의 연락가능한 전화번호를 기입해주세요.</label>
+          <input type="text"
+                 name="tel"
+                 class="form-control"
+                 id="customer_tel"
+                 aria-describedby="telHelp"
+                 placeholder="고객님의 연락가능한 전화번호를 기입해주세요."
+                 autocomplete="off"
+                 required
+                 pattern="\d*"
+                 maxlength="13" />
+          <small id="telHelp" class="form-text text-muted">* '-' 문자를 제외하고 입력해주세요.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="commentTextarea">저희가 참고해야할 사항에 대해서 간략하게 메모를 남겨주세요. (선택)</label>
+          <textarea class="form-control"
+                    id="commentTextarea"
+                    rows="3"
+                    cols="5"
+                    name="comment"
+                    placeholder="예시)&#13;&#10; 2017년식 모닝을 구매(판매)하고 싶습니다. 혹은 기타 상담내용을 써 주세요."></textarea>
+        </div>
+
+        <div>
+          <input type="checkbox" name="agreement" id="agreement" required />
+          <label for="agreement">개인정보 수집 및 이용에 동의합니다. <a href="/privacy" target="_blank">(내용)</a></label>
+        </div>
+
+        <br />
+
+        <button type="submit" class="btn btn-primary btn-md btn-block btn-submit">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+          &nbsp;제출하기
+        </button>
+
+        <a href="tel:1600-8218" class="btn btn-info btn-block btn_cell">
+          <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+          &nbsp;바로 전화 (1600-8218)
+        </a>
+
+        <a href="/" class="btn btn-back btn-default btn-block">
+          <i class="fa fa-undo" aria-hidden="true"></i>
+          &nbsp;돌아가기
+        </a>
+        <input type="hidden" name="_csrf" value="{{csrfToken}}" />
+      </fieldset>
+    </form>
+  </div>
+
+  <div class="clearfix"></div>
+
+  <div style="padding: 20px 10px 10px 10px;">{{>ft}}</div>
+
+</div>
+

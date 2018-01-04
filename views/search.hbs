@@ -1,0 +1,14 @@
+{{#if (isEquals isMobile 1 )}}
+  <div class="m_container">
+    {{>hd}}
+    <article>
+    <div class="search-pre center">
+      원하시는 상품명이나 해당 상품의 회사명을 입력해주세요.<br /><br /><br />
+      <a href="/request" class="btn btn-req-item bold">상품 신청 및 문의</a>
+    </div>
+    </article>
+    {{>m_cloud}}
+  </div>
+{{else}}
+  없는 페이지 입니다.
+{{/if}}

@@ -1,0 +1,62 @@
+{{#if (isEquals isMobile 1 )}}
+  <div class="m_container">
+    {{>hd}}
+    {{>m_video}}
+    <article class="m_content">
+      {{>m_navi}}
+      <div class="m_magazine_wrp">
+        <ul class="m_magazine_list clearfix">
+          {{#each list}}
+          <li class="m_magazine_li">
+            <a href="http://blog.naver.com/chadaeli/{{blog_url}}" target="_blank" class="m_magazine_link">
+              <img src="{{../static}}magazine/{{img_url}}" alt="{{title}}" class="car_thumbnail" />
+              <span class="tit">{{title}}</span>
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </article>
+    {{>m_ft}}
+    {{>m_cloud}}
+  </div>
+{{else}}
+
+  <div class="container_p">
+    {{>pc_header}}
+    {{>wing_right}}
+    <div class="con_p">
+        <div class="special_part item_all" id="special_part">
+          <h2 class="txt-head">
+            <strong>차대리 매거진</strong>
+            <span class="txt-sm">차대리가 전하는 최신 중고차 소식</span>
+          </h2>
+
+          {{#if list}}
+          <div class="row sp_row clearfix">
+            <div class="row sp_row">
+              {{#each list}}
+                <div class="col-item-5">
+                  <a href="http://blog.naver.com/chadaeli/{{blog_url}}" class="item-link" target="_blank">
+                    <img src="{{../static}}magazine/{{img_url}}" alt="{{title}}" width="204" height="128" class="car_thumbnail" />
+                    <span class="desc">{{title}}</span>
+                    <span class="cover"></span>
+                    <span class="info">
+                      <strong class="title ellipsis">{{title}}</strong>
+                    </span>
+                  </a>
+                </div>
+              {{/each}}
+            </div>
+          </div>
+          {{else}}
+            <div class="empty_data center">
+              <h4 class="empty-heading">아직 등록된 소식이 없습니다.</h4>
+            </div>
+          {{/if}}
+        </div>
+    </div>
+    {{>pc_footer}}
+  </div>
+  {{>cloud_nav_bottom}}
+{{/if}}

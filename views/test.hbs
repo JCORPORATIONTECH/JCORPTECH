@@ -1,0 +1,10 @@
+<form action="/car/upload" method="post" enctype="multipart/form-data">
+  <input type="text" name="model" value="car test" />
+  <input type="number" name="price" value="4000" />
+  <input type="number" name="year" value="2017" />
+  <select name="company_id" id="company_id">
+    <option value="1" checked>현대</option>
+  </select>
+  <input type="file" name="images" accept="image/*" />
+  <button type="submit">전송</button>
+</form>

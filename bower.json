@@ -1,0 +1,39 @@
+{
+  "name": "hc_mobile",
+  "description": "hc mobile",
+  "keywords": [],
+  "authors": [
+    "yijaejun <yijaejun81@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/JJ81/HC-Mobile",
+  "main": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "jquery": "^3.1.1",
+    "fastclick": "^1.0.6",
+    "bootstrap": "^3.3.7",
+    "jquery.cookie": "jquery-cookie#^1.4.1",
+    "jQueryValidate": "*",
+    "jquery-ui": "jqueryui#^1.12.1",
+    "font-awesome": "fontawesome#^4.7.0",
+    "requirejs": "^2.3.2",
+    "jquery-validation": "jquery.validate#^1.13.0",
+    "swiper": "^3.4.1",
+    "jquery.easing": "^1.3.1",
+    "vue": "^2.3.3",
+    "countUp.js": "^1.9.3",
+    "slick-carousel": "slick.js#^1.8.1"
+  },
+  "devDependencies": {
+    "modernizr": "^3.3.1"
+  }
+}

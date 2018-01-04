@@ -1,0 +1,259 @@
+{{#if (isEquals isMobile 1 )}}
+  <div class="m_container">
+    {{>hd}}
+    <article>
+      <div class="search-result">
+        <div class="result-heading center">
+          <strong class="blue result-word center">{{word}}</strong> 에 대한 검색결과
+          <span class="txt-result-search">※ 혹시 원하시는 상품이 없으신가요?</span>
+          <a href="/request" class="btn btn-req-item">원하는 상품 예약하기</a>
+        </div>
+
+        {{! 특가 상품 바인딩 }}
+        {{#if sp_list}}
+        <div class="result-search-sp">
+          <h3 class="center sp_heading">차대리 인증 상품</h3>
+          {{#each sp_list}}
+          <div class="list_item">
+            {{#if (isEmpty option_id)}}
+              <a href="http://blog.naver.com/chadaeli/{{blog_url}}" class="link-item" target="_blank">
+            {{else}}
+            <a href="/detail/{{id}}" class="link-item">
+            {{/if}}
+
+              <div class="img_wrp">
+                <img src="{{../static}}cars/{{img_url}}" alt="{{model}}" class="m_thumbnail" />
+                {{#unless (isEmpty video_url)}}<span class="ico-cg"><img src="/static/images/mobile/ico_CG.png" alt="차대리인증" width="40" /></span>{{/unless}}
+
+                <span class="badge ico_badge_m">특가</span>
+
+                {{#if (isEquals sold 1)}}<span class="badge item_soldout">SOLDOUT</span>{{/if}}
+                <!--<span class="badge ico_negotiate_m">할인가능</span>-->
+              </div>
+              <span class="info">
+              <span class="model">
+                <span class="title">{{model}}</span>
+              </span>
+              <span class="sub_info">
+                {{year}}년형 <span class="split">|</span>
+                {{#if (isEquals fuel 'G') }}가솔린{{else if (isEquals fuel 'D')}}디젤{{else if (isEquals fuel 'H')}}하이브리드{{else if (isEquals fuel 'E')}}전기{{else if (isEquals fuel 'L')}}LPG{{else}}?{{/if}}
+                <span class="split">|</span> {{comma-number kilo}}km
+              </span>
+              <strong class="price">
+                <span class="txt-price">시작가</span><br />
+                <span class="red">{{comma-number price}}</span> <span class="price-unit">만원</span>
+              </strong>
+            </span>
+            </a>
+          </div>
+          {{/each}}
+        </div>
+        {{/if}}
+
+        {{#if list}}
+        {{!특가 상품을 제외한 상품 리스트 }}
+        <div class="{{#if sp_list}}result-search-not-sp{{/if}}">
+          {{#each list}}
+            <div class="list_item">
+              {{#if (isEmpty option_id)}}
+                {{#if (isEmpty cafe_url)}}
+                <a href="http://blog.naver.com/chadaeli/{{blog_url}}" class="link-item" target="_blank">
+                {{else}}
+                <a href="http://cafe.naver.com/chadaeli/{{cafe_url}}" class="link-item" target="_blank">
+                {{/if}}
+              {{else}}
+                <a href="/detail/{{id}}" class="link-item">
+              {{/if}}
+
+                <div class="img_wrp">
+                  <img src="{{../static}}cars/{{img_url}}" alt="{{model}}" class="m_thumbnail" />
+                  {{#unless (isEmpty video_url)}}<span class="ico-cg"><img src="/static/images/mobile/ico_CG.png" alt="차대리인증" width="40" /></span>{{/unless}}
+
+                  {{#if (isEquals type 'P')}}
+                    <span class="badge ico_badge_m">인기</span>
+                  {{else if (isEquals type 'R')}}
+                    <span class="badge ico_badge_m">추천</span>
+                  {{else if (isEquals type 'A')}}
+                    <!--<span class="badge ico_badge_m">제휴</span>-->
+                  {{else if (isEquals type 'G')}}
+                    <span class="badge ico_badge_m">일반</span>
+                  {{/if}}
+
+                  {{#if (isEquals sold 1)}}<span class="badge item_soldout">SOLDOUT</span>{{/if}}
+                  <!--<span class="badge ico_negotiate_m">할인가능</span>-->
+                </div>
+                <span class="info">
+              <span class="model">
+                <span class="title">{{model}}</span>
+              </span>
+              <span class="sub_info">
+                {{year}}년형 <span class="split">|</span>
+                {{#if (isEquals fuel 'G') }}가솔린{{else if (isEquals fuel 'D')}}디젤{{else if (isEquals fuel 'H')}}하이브리드{{else if (isEquals fuel 'E')}}전기{{else if (isEquals fuel 'L')}}LPG{{else}}?{{/if}}
+                <span class="split">|</span> {{comma-number kilo}}km
+              </span>
+              <strong class="price">
+                <span class="txt-price">시작가</span><br />
+                <span class="red">{{comma-number price}}</span> <span class="price-unit">만원</span>
+              </strong>
+            </span>
+              </a>
+            </div>
+          {{/each}}
+        </div>
+
+        <div class="center">
+          <span class="txt-result-search">※ 혹시 원하시는 상품이 없으신가요?</span><br /><br />
+          <a href="/request" class="btn btn-req-item">원하는 상품 예약하기</a>
+        </div>
+        {{/if}}
+
+      </div>
+    </article>
+    {{>m_cloud}}
+  </div>
+{{else}}
+{{! =========================== PC ============================= }}
+  <div class="container_p">
+    {{>pc_header}}
+    {{>wing_right}}
+    <div class="con_p">
+
+      <div class="special_part search_result" id="special_part">
+        <h2 class="txt-head result-heading clearfix">
+            <span class="pull-left"><strong class="blue">{{word}}</strong> 에 대한 검색결과</span>
+            <span class="btnAreaReserve">
+              <small>원하는 차가 없으신가요?</small>&nbsp;
+              <a href="/request" target="_blank" class="btn btn-primary btn-reserve-item">원하는 상품 예약하기</a>
+            </span>
+        </h2>
+
+        {{#if sp_list}}
+        <h2 class="txt-head" style="padding-top: 0;">
+          <strong>차대리 인증 상품</strong>
+          <span class="txt-sm">쓰윽~ 빠르게 스쳐지나가는 동영상 인증 상품입니다.</span>
+        </h2>
+        <div class="row sp_row clearfix btm-line">
+          {{#each sp_list}}
+            <div class="col-item-5">
+              {{#if (isEmpty option_id)}}
+              <a href="http://blog.naver.com/chadaeli/{{blog_url}}" class="item-link" target="_blank">
+              {{else}}
+              <a href="/detail/{{id}}" class="item-link" target="_blank">
+              {{/if}}
+
+                {{#if (isEquals sold 1)}}
+                  <span class="ico_soldout badge">SOLDOUT</span>
+                  <span class="txt_soldout">이미 팔린 상품입니다.</span>
+                {{/if}}
+                {{#unless (isEmpty video_url)}}<span class="ico-flag-cg" title="차대리인증상품"></span>{{/unless}}
+                <span class="cover {{#if (isEquals sold 0)}}cover_cross{{/if}}"></span>
+                <img src="{{../static}}cars/{{img_url}}" alt="{{model}}" width="204" height="128" class="car_thumbnail" />
+
+                {{#if (isEquals type 'SP')}}
+                  <span class="info">
+                    <strong class="model">{{model}}</strong>
+                    <span class="spec">{{year}}년형 | {{#if (isEquals fuel 'G') }}가솔린{{else if (isEquals fuel 'D')}}디젤{{else if (isEquals fuel 'H')}}하이브리드{{else if (isEquals fuel 'E')}}전기{{else if (isEquals fuel 'L')}}LPG{{else}}?{{/if}}</span>
+                    <span class="meter">{{comma-number kilo}}km</span>
+                    <!--<span class="price"><span class="through">{{price}}만원</span></span>-->
+                    <strong class="s_price">
+                      <span class="txt_price">시작가</span> {{price}}
+                      <span class="sm-txt-black">만원</span>
+                    </strong>
+                <!--<span class="remain_day bg-red">D-1</span>-->
+                <!--<span class="txt-deadline">마감임박</span>-->
+                    <!--<span class="ico_negotiate"></span>-->
+                  </span>
+                {{else}}
+                  <span class="info">
+                        <strong class="model">{{model}}</strong>
+                        <span class="spec">{{year}}년형 | {{#if (isEquals fuel 'G') }}가솔린{{else if (isEquals fuel 'D')}}디젤{{else if (isEquals fuel 'H')}}하이브리드{{else if (isEquals fuel 'E')}}전기{{else if (isEquals fuel 'L')}}LPG{{else}}?{{/if}}</span>
+                        <span class="meter">{{comma-number kilo}}km</span>
+                        <strong class="s_price">
+                          <span class="txt_price">시작가</span> {{price}}
+                          <span class="sm-txt-black">만원</span>
+                        </strong>
+                      </span>
+                {{/if}}
+              </a>
+            </div>
+          {{/each}}
+        </div>
+        {{/if}}
+
+          {{#unless sp_list}}
+          <div class="row sp_row clearfix btm-line">
+              <h2 class="txt-head">
+                  <strong>차대리 동영상 인증 상품</strong>
+                  <span class="txt-sm">차대리에서 동영상으로 인증한 상품입니다.</span>
+              </h2>
+              <div class="empty_data center" style="min-height: 150px;">
+                  <h4 class="empty-heading">아직 등록된 동영상 인증 상품이 없습니다.</h4>
+                  <a href="/request" class="btn btn-primary btn-reserve-item" target="_blank">원하는 상품 예약하기</a>
+              </div>
+          </div>
+          {{/unless}}
+
+        {{#if list}}
+          <div class="row sp_row clearfix">
+              {{#each list}}
+                <div class="col-item-5">
+                  {{#if (isEmpty option_id)}}
+                    {{#if (isEmpty cafe_url)}}
+                    <a href="http://blog.naver.com/chadaeli/{{blog_url}}" class="item-link" target="_blank">
+                    {{else}}
+                    <a href="http://cafe.naver.com/chadaeli/{{cafe_url}}" class="item-link" target="_blank">
+                    {{/if}}
+                  {{else}}
+                  <a href="/detail/{{id}}" class="item-link" target="_blank">
+                  {{/if}}
+
+                    {{#if (isEquals sold 1)}}
+                      <span class="ico_soldout badge">SOLDOUT</span>
+                      <span class="txt_soldout">이미 팔린 상품입니다.</span>
+                    {{/if}}
+                    {{#unless (isEmpty video_url)}}<span class="ico-flag-cg" title="차대리인증상품"></span>{{/unless}}
+                      <span class="cover {{#if (isEquals sold 0)}}cover_cross{{/if}}"></span>
+                      <img src="{{../static}}cars/{{img_url}}" alt="{{model}}" width="204" height="128" class="car_thumbnail" />
+
+
+                    {{#if (isEquals type 'SP')}}
+                      <span class="info">
+                        <strong class="model">{{model}}</strong>
+                        <span class="spec">{{year}}년형 | {{#if (isEquals fuel 'G') }}가솔린{{else if (isEquals fuel 'D')}}디젤{{else if (isEquals fuel 'H')}}하이브리드{{else if (isEquals fuel 'E')}}전기{{else if (isEquals fuel 'L')}}LPG{{else}}?{{/if}}</span>
+                        <span class="meter">{{comma-number kilo}}km</span>
+                        <span class="price"><span class="through">{{price}}만원</span></span>
+                        <strong class="s_price">
+                          <span class="txt_price">시작가</span> {{price}}
+                          <span class="sm-txt-black">만원</span>
+                        </strong>
+                      </span>
+                    {{else}}
+                      <span class="info">
+                        <strong class="model">{{model}}</strong>
+                        <span class="spec">{{year}}년형 | {{#if (isEquals fuel 'G') }}가솔린{{else if (isEquals fuel 'D')}}디젤{{else if (isEquals fuel 'H')}}하이브리드{{else if (isEquals fuel 'E')}}전기{{else if (isEquals fuel 'L')}}LPG{{else}}?{{/if}}</span>
+                        <span class="meter">{{comma-number kilo}}km</span>
+                        <strong class="s_price">
+                          <span class="txt_price">시작가</span> {{price}}
+                          <span class="sm-txt-black">만원</span>
+                        </strong>
+                        <!--<span class="ico_negotiate"></span>-->
+                      </span>
+                    {{/if}}
+                  </a>
+                </div>
+              {{/each}}
+            </div>
+        {{/if}}
+
+        {{#unless list}}
+          <div class="empty_data center">
+            <h4 class="empty-heading">아직 등록된 상품이 없습니다.</h4>
+            <a href="/request" class="btn btn-primary btn-reserve-item" target="_blank">원하는 상품 예약하기</a>
+          </div>
+        {{/unless}}
+      </div>
+    </div>
+    {{>pc_footer}}
+  </div>
+  {{>cloud_nav_bottom}}
+{{/if}}

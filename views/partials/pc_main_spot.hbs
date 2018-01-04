@@ -1,0 +1,63 @@
+<div class="hot_spot">
+  <div class="spot_inner clearfix">
+    <div class="videos">
+      <h3 class="tit">HOT CLIPS</h3>
+      <div class="video-display clearfix">
+        <ul class="video-ls">
+          {{#each videos}}
+          <li class="video-li">
+            <a href="#" class="video-link {{#if (isEquals @index 0)}}active{{/if}}" data-video-id="{{url}}" data-video-title="{{title}}">
+              <span class="caption">{{title}}</span>
+              <span class="bg_caption"></span>
+              <span class="cover"></span>
+              {{! todo 이벤트 등록시 이미지를 별도로 등록을 할 수 있도록 한다. 사이즈는 160*91 }}
+              <img src="{{../static}}video/{{img_url}}" alt="{{title}}" width="160" height="91" />
+            </a>
+          </li>
+          {{/each}}
+          <li class="video-more">
+            <a href="https://www.youtube.com/channel/UCSqBhJZa71pUHwIuEj8rjMQ" class="more-link-video" target="_blank">
+              영상 더보기
+              <i class="glyphicon glyphicon-menu-right"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="video-view">
+          <div class="player">
+            <iframe class="iframe_video" width="553" height="313" src="https://www.youtube.com/embed/WHOM0APgUbo?autoplay=0&rel=0&showinfo=1&controls=1&autohide=1&theme=light&disablekb=1&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="title ellipsis video-title">중고차1등안전거래, 차대리 CF 영상</div>
+        </div>
+      </div>
+    </div>
+    <div class="event_part">
+      <h3 class="tit">차대리 이벤트</h3>
+      {{! todo  이벤트도 등록을 별도로 할 수 있도록 한다. }}
+      <div class="event_list">
+        <a href="http://blog.naver.com/chadaeli/221013704482" target="_blank" class="link-evt"><img src="/static/images/desktop/event/evt_reserve.jpg" alt="중고차예약" /></a>
+        <a href="http://blog.naver.com/chadaeli/220994483823" target="_blank" class="link-evt"><img src="/static/images/desktop/event/evt_blackbox.jpg" alt="차대리오픈기념" /></a>
+        <a href="http://blog.naver.com/chadaeli/220994481047" target="_blank" class="link-evt"><img src="/static/images/desktop/event/evt_repair.jpg" alt="무상점검서비스" /></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner_area">
+    <ul class="ban_list clearfix">
+      <li>
+        <div class="ban_broadcasting">
+          <a href="https://www.facebook.com/chadaeli7/" target="_blank" class="btn-fb-broadcast center" title="페이스북방송 보러가기">
+            <img src="/static/images/desktop/banner/img_fb_broadcast.gif" alt="페이스북" width="50" />
+          </a>
+          <a href="https://www.youtube.com/channel/UCSqBhJZa71pUHwIuEj8rjMQ" target="_blank" class="btn-yt-broadcast center" title="유튜브방송 보러가기">
+            <img src="/static/images/desktop/banner/img_yt_broadcast.gif" alt="유튜브" width="50" />
+          </a>
+          <img src="/static/images/desktop/banner/img_broadcast_time_pc.gif" alt="차대리방송시간" width="170" class="txt-broadcast" title="차대리방송 (월~금) 20:00~21:00" />
+        </div>
+      </li>
+      <li style="margin: 0 20px;"><a href="/request" target="_blank"><img src="/static/images/desktop/banner/ban_sellmycar.jpg" alt="내차팔기" /></a></li>
+      <li><a href="/request" target="_blank"><img src="/static/images/desktop/banner/ban_buymycar.jpg" alt="내차사기" /></a></li>
+      <li style="margin-left: 20px;"><a href="/request" target="_blank"><img src="/static/images/desktop/banner/ban_myquery.jpg" alt="신용할부조회" /></a></li>
+    </ul>
+  </div>
+
+</div>

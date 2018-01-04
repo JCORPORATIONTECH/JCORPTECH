@@ -1,0 +1,58 @@
+<div class="cloud_nav">
+  <div class="cloud_nav_inner">
+    <ol class="nav_in_cloud clearfix">
+      <li class="bg_white center first-line">
+        <span class="txt">상품 전체</span>
+
+        <strong class="block count"><span class="red font18"> {{#each total_item}}{{comma-number own_count}} +{{/each}} </span> 대</strong>
+      </li>
+      <li class="bg_white center second-line">
+        <span class="txt">최근 / 누적 (인증상품)</span>
+        <strong class="block count"><span class="red font18"> {{#each own_item}} {{comma-number item_count}} {{#if (isEquals @index 0)}}/{{/if}} {{/each}} + </span> 대</strong>
+      </li>
+      <li class="third-line center">
+        <span class="white">고객센터</span>
+        <span class="font18 mint">1600-8218</span>
+      </li>
+      <li class="list_chat center">
+        <a href="/" class="block link-chat white">
+            <i class="icon-front icon-live-chat"></i>
+            실시간채팅
+            <i class="ico-arrow-end glyphicon glyphicon-menu-right"></i>
+          </span>
+          <ul class="sub_nav_chat">
+            <li class="plus-friend">
+              <a href="http://plus.kakao.com/home/ov0qv67l" class="block white link-chat-each" target="_blank">
+                <i class="icon-front icon-plus-chingu"></i>
+                플러스친구
+                <i class="ico-arrow-end glyphicon glyphicon-menu-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://talk.naver.com/ct/wc4ktq" class="block white link-chat-each" target="_blank">
+                <i class="icon-front icon-taktak"></i>
+                네이버톡톡
+                <i class="ico-arrow-end glyphicon glyphicon-menu-right"></i>
+              </a>
+            </li>
+          </ul>
+        </a>
+      </li>
+      <li class="list_reserve center">
+        <a href="/request" class="white block" target="_blank">
+          <i class="icon-front icon-reserve"></i>
+          예약하기
+          <i class="ico-arrow-end glyphicon glyphicon-menu-right"></i>
+        </a>
+      </li>
+      <li class="list_load center">
+        <a href="/request" class="white block" target="_blank">
+          <i class="icon-front icon-loan"></i>
+          할부문의
+          <i class="ico-arrow-end glyphicon glyphicon-menu-right"></i>
+        </a>
+      </li>
+    </ol>
+    <div class="panel_count"></div>
+  </div>
+</div>

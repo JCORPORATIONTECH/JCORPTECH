@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-md-8">
+    <div class="video">
+      <a href="#video" class="video_link">
+        <img src="/static/images/main/video_cover.gif" alt="차대리" class="img_preview" />
+      </a>
+
+      <input type="hidden" class="video_info" value="https://www.youtube.com/embed/-vyTItxIDZk?autoplay=1&rel=0&showinfo=1&controls=1" />
+    </div>
+  </div>
+  <div class="col-md-4">
+    <ol class="clearfix video_list_m clearfix" id="list-video">
+      <li v-for="list in video_list" class="list_wrap" v-on:click="selectVideo(this, list.url)">
+        <a href="#video" :data-value="list.url" class="link_video">
+          <strong class="title" v-cloak>{ list.title }</strong>
+          <i class="glyphicon glyphicon-chevron-right"></i>
+        </a>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="video_more">
+  <p class="font18 center">더 많은 <b class="blue">영상</b>을 보고싶다면?</p>
+  <a href="https://www.youtube.com/channel/UCSqBhJZa71pUHwIuEj8rjMQ" class="font15 bold blue btn-more" target="_blank">더 보기</a>
+</div>
+
+
+
+<!--<div class="video">-->
+  <!--<a href="#video" class="video_link">-->
+    <!--<img src="/static/images/main/video_cover.gif" alt="차대리" class="img_preview" />-->
+  <!--</a>-->
+
+  <!--<input type="hidden" class="video_info" value="https://www.youtube.com/embed/-vyTItxIDZk?autoplay=1&rel=0&showinfo=1&controls=1" />-->
+<!--</div>-->
+
+<!--<ol class="clearfix video_list_m clearfix" id="list-video">-->
+  <!--<li v-for="list in video_list" class="list_wrap" v-on:click="selectVideo(this, list.url)">-->
+    <!--<a href="#video" :data-value="list.url" class="link_video">-->
+      <!--<strong class="title" v-cloak>{ list.title }</strong>-->
+      <!--<i class="glyphicon glyphicon-chevron-right"></i>-->
+    <!--</a>-->
+  <!--</li>-->
+<!--</ol>-->
+
+<!--<div class="video_more">-->
+  <!--<p class="font18 center">더 많은 <b class="blue">영상</b>을 보고싶다면?</p>-->
+  <!--<a href="https://www.youtube.com/channel/UCSqBhJZa71pUHwIuEj8rjMQ" class="font15 bold blue btn-more" target="_blank">더 보기</a>-->
+<!--</div>-->
+
+
+<input type="hidden" value="{{videos}}" class="video_list_val" />

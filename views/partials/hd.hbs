@@ -1,0 +1,26 @@
+<header class="m_header">
+  <h1 class="logo center">
+    <a href="/" class="btn-home"><img src="/static/images/mobile/img_logo_hd.gif" alt="{{title}}" width="160" /></a>
+    {{#if (isEquals isMobile 1 )}}
+        {{#if (isEquals current_path 'MAIN')}}
+            <a href="#" class="btn-menu"><img src="/static/images/mobile/ico_hamberg.gif" alt="메뉴" width="30" /></a>
+        {{else}}
+            <a href="javascript:window.history.back(-1);" class="btn-back-hd"><img src="/static/images/mobile/btn-back-hd.png" alt="뒤로" width="30" /></a>
+        {{/if}}
+
+        {{#if (isEquals current_path 'SEARCH')}}
+          <form action="/search/item" method="post" class="frm-search-m">
+            <input type="text" name="searchWord" class="search-input" placeholder="상품검색" autocomplete="off" required autofocus />
+            <input type="image" src="/static/images/mobile/btn-search-start.gif" value="검색" class="btn-search-input" />
+            <input type="hidden" name="_csrf" value="{{csrfToken}}" />
+          </form>
+          <a href="/" class="btn-close-search"><img src="/static/images/mobile/btn-close-searchbar.gif" alt="닫기" width="30" /></a>
+        {{else}}
+          <a href="/search" class="btn-search"><img src="/static/images/mobile/ico_telescope.gif" alt="검색" width="28" /></a>
+        {{/if}}
+    {{/if}}
+  </h1>
+  {{#unless (isEqualsInArray current_path 'SUBDETAIL' 'SRC_ALL' 'ABOUT' 'PARTNERTSHIP')}}
+    {{>m_navi}}
+  {{/unless}}
+</header>

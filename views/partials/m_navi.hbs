@@ -1,0 +1,9 @@
+<nav class="navi">
+  <ul class="navi_list clearfix">
+    <li><a href="#allmenu" class="link_navi btn-menu-2"><strong class="blue">+전체메뉴</strong></a></li>
+    <li><a href="/magazine" class="link_navi{{#if (isEquals current_path 'MAGAZINE')}} active{{/if}}">매거진</a></li>
+    <li><a href="/special_item" class="link_navi{{#if (isEquals current_path 'SP_ALL')}} active{{/if}}">동영상인증</a></li>
+    <li><a href="/foreign_item" class="link_navi{{#if (isEquals current_path 'FOREIGN')}} active{{/if}}">수입</a></li>
+    <li><a href="/affiliate_item" class="link_navi{{#if (isEquals current_path 'AFF_ALL')}} active{{/if}}">국산</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,67 @@
+<div class="wing-wrap">
+  <div class="wing-right">
+    <div class="wing-right-inner">
+      <div class="item_info_count">
+        <div class="info_entire">
+          <strong class="center block">상품 전체</strong>
+          <span class="center block"> <strong class="red">{{#each total_item}}{{comma-number own_count}} +{{/each}}</strong> 대</span>
+        </div>
+        <div class="info_registered">
+          <strong class="center block">최근 / 누적 (인증상품) </strong>
+          <span class="red center block"><strong class="red font18"> {{#each own_item}} {{comma-number item_count}} {{#if (isEquals @index 0)}}/{{/if}} {{/each}}  </strong> 대</span>
+        </div>
+      </div>
+      <div class="query_list">
+        <a href="javascript:alert('차대리 고객센터\n1600-8218로 지금 전화주세요^^')" class="block"><img src="/static/images/desktop/img_customer.gif" alt="1600-8218" /></a>
+        <a href="/request" target="_blank" class="block"><img src="/static/images/desktop/img_mycar.gif" alt="내차팔기" /></a>
+        <a href="/request" target="_blank" class="block"><img src="/static/images/desktop/img_reserve.gif" alt="예약하기" /></a>
+        <a href="/request" target="_blank" class="block"><img src="/static/images/desktop/img_loan.gif" alt="할부문의" /></a>
+      </div>
+      <div class="channel_list">
+        <ul class="promote_ch clearfix">
+          <li class="promo_li">
+            <a href="https://www.facebook.com/chadaeli7/" target="_blank" class="promo_link">
+              <img src="/static/images/desktop/btn-fb.gif" alt="페이스북" />
+            </a>
+          </li>
+          <li class="promo_li">
+            <a href="https://www.instagram.com/chadaeli_official/" target="_blank" class="promo_link">
+              <img src="/static/images/desktop/btn-insta.gif" alt="인스타그램" />
+            </a>
+          </li>
+          <li class="promo_li">
+            <a href="http://blog.naver.com/chadaeli" target="_blank" class="promo_link">
+              <img src="/static/images/desktop/btn-blog.gif" alt="네이버블로그" />
+            </a>
+          </li>
+          <li class="promo_li">
+            <a href="http://cafe.naver.com/chadaeli" target="_blank" class="promo_link">
+              <img src="/static/images/desktop/btn-cafe.gif" alt="네이버까페" />
+            </a>
+          </li>
+          <li class="promo_li">
+            <a href="https://www.youtube.com/channel/UCSqBhJZa71pUHwIuEj8rjMQ" target="_blank" class="promo_link">
+              <img src="/static/images/desktop/btn-yt.gif" alt="유튜브" />
+            </a>
+          </li>
+          <li class="promo_li">
+            <a href="https://twitter.com/chadaeli7" target="_blank" class="promo_link">
+              <img src="/static/images/desktop/btn-tw.gif" alt="트위터" />
+            </a>
+          </li>
+          <li class="promo_li">
+            <a href="http://plus.kakao.com/home/ov0qv67l" target="_blank" class="promo_link">
+              <img src="/static/images/desktop/btn-plus.gif" alt="플러스친구" />
+            </a>
+          </li>
+          <li class="promo_li">
+            <a href="https://talk.naver.com/ct/wc4ktq" target="_blank" class="promo_link">
+              <img src="/static/images/desktop/btn-taktak.gif" alt="네이버톡톡" />
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

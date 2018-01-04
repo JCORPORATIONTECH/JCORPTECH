@@ -1,0 +1,162 @@
+<div class="left_navi blind">
+  <h1 class="left_hd center">
+    <img src="/static/images/mobile/img_lg_left.jpg" alt="중고차1등안전거래, 차대리" width="150" />
+    <a href="#close" class="closeNavi"><img src="/static/images/mobile/btn-left-close.gif" alt="닫기" width="20" /></a>
+  </h1>
+
+  <div class="left_con_wrp">
+    {{! 새로운 네비게이션 리스트로 구성할 것 (서브로 확장이 가능하도록!) }}
+    <ul class="left_navi_list">
+      <li class="left_navi_li"><a href="#magazine" class="left_navi_link">차대리매거진</a>
+        <ol class="left_navi_sub">
+          <li class="left_navi_sub_ls"><a href="/about" class="left_navi_sub_link">차대리소개</a></li>
+          <li class="left_navi_sub_ls"><a href="http://blog.naver.com/chadaeli/221133468406" target="_blank" class="left_navi_sub_link">차대리파트너모집</a></li>
+          <li class="left_navi_sub_ls"><a href="/magazine" class="left_navi_sub_link">차대리TV&캠페인</a></li>
+        </ol>
+      </li>
+      <li class="left_navi_li"><a href="/special_item" class="left_navi_link">동영상인증상품</a></li>
+      <li class="left_navi_li"><a href="#category" class="left_navi_link">카테고리별</a>
+        <ol class="left_navi_sub">
+          <li class="left_navi_sub_ls"><a href="/event/new" class="left_navi_sub_link">신차급</a></li>
+          <li class="left_navi_sub_ls"><a href="/event/short_distance" class="left_navi_sub_link">동급대비주행거리갑</a></li>
+          <li class="left_navi_sub_ls"><a href="/event/suv" class="left_navi_sub_link">SUV/RV</a></li>
+          <li class="left_navi_sub_ls"><a href="/event/smallcar" class="left_navi_sub_link">경차</a></li>
+          {{! todo 이벤트 형식으로 새로 만들어야 한다. }}
+          <li class="left_navi_sub_ls"><a href="/event/dailycar" class="left_navi_sub_link">출퇴근용 & 데일리카</a></li>
+          <li class="left_navi_sub_ls"><a href="/event/myfirstcar" class="left_navi_sub_link">내 생애 첫차</a></li>
+        </ol>
+      </li>
+      <li class="left_navi_li"><a href="#price" class="left_navi_link">금액대별</a>
+        <ol class="left_navi_sub">
+          <li class="left_navi_sub_ls"><a href="/event/price/5000" class="left_navi_sub_link">5000만원이상</a></li>
+          <li class="left_navi_sub_ls"><a href="/event/price/3000/5000" class="left_navi_sub_link">5000~3000만원</a></li>
+          <li class="left_navi_sub_ls"><a href="/event/price/2000/3000" class="left_navi_sub_link">3000~2000만원</a></li>
+          <li class="left_navi_sub_ls"><a href="/event/price/1000/2000" class="left_navi_sub_link">2000~1000만원</a></li>
+          <li class="left_navi_sub_ls"><a href="/event/price/500/1000" class="left_navi_sub_link">1000~500만원</a></li>
+          <li class="left_navi_sub_ls"><a href="/event/price/0/500" class="left_navi_sub_link">500~ 만원</a></li>
+        </ol>
+      </li>
+      <li class="left_navi_li"><a href="#domestic" class="left_navi_link">국산상품</a>
+        <ol class="left_navi_sub">
+          <li class="left_navi_sub_ls"><a href="/affiliate_item" class="left_navi_sub_link">전체</a></li>
+          <li class="left_navi_sub_ls"><a href="/unusual_item" class="left_navi_sub_link">특수&화물</a></li>
+        </ol>
+      </li>
+      <li class="left_navi_li"><a href="#foreign" class="left_navi_link">수입상품</a>
+        <ol class="left_navi_sub">
+          <li class="left_navi_sub_ls"><a href="/foreign_item" class="left_navi_sub_link">전체</a></li>
+          <li class="left_navi_sub_ls"><a href="/foreign_item/germany" class="left_navi_sub_link">독일3사</a></li>
+        </ol>
+      </li>
+    </ul>
+    {{! -- 새로운 네비게이션 리스트로 구성할 것 }}
+    <!--<ul class="left_list clearfix">-->
+      <!--<li class="left_list_li">-->
+        <!--<a href="/event/new" class="left_link_a">-->
+          <!--신차급-->
+          <!--<i class="glyphicon glyphicon-menu-right"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li class="left_list_li">-->
+        <!--<a href="/special_item" class="left_link_a">-->
+          <!--차대리 특가-->
+          <!--<i class="glyphicon glyphicon-menu-right"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li class="left_list_li">-->
+        <!--<a href="/event/smallcar" class="left_link_a">-->
+          <!--경차-->
+          <!--<i class="glyphicon glyphicon-menu-right"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li class="left_list_li">-->
+        <!--<a href="/event/short_distance" class="left_link_a">-->
+          <!--동급대비 갑-->
+          <!--<i class="glyphicon glyphicon-menu-right"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li class="left_list_li">-->
+        <!--<a href="/event/car/500" class="left_link_a">-->
+          <!--~500만원대-->
+          <!--<i class="glyphicon glyphicon-menu-right"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li class="left_list_li">-->
+        <!--<a href="/event/car/1000" class="left_link_a">-->
+          <!--~1000만원대-->
+          <!--<i class="glyphicon glyphicon-menu-right"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li class="left_list_li">-->
+        <!--<a href="/affiliate_item" class="left_link_a">-->
+          <!--일반상품-->
+          <!--<i class="glyphicon glyphicon-menu-right"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li class="left_list_li">-->
+        <!--<a href="/magazine" class="left_link_a">-->
+          <!--매거진-->
+          <!--<i class="glyphicon glyphicon-menu-right"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li class="left_list_li">-->
+        <!--<a href="/request" class="left_link_a">-->
+          <!--내차예약-->
+          <!--<i class="glyphicon glyphicon-menu-right"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li class="left_list_li">-->
+        <!--<a href="/request" class="left_link_a">-->
+          <!--내차팔기-->
+          <!--<i class="glyphicon glyphicon-menu-right"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li class="left_list_li">-->
+        <!--<a href="/" class="left_link_a">-->
+          <!--홈으로-->
+          <!--<i class="glyphicon glyphicon-menu-right"></i>-->
+        <!--</a>-->
+      <!--</li>-->
+    <!--</ul>-->
+
+    <!--<div class="left_event_m">-->
+      <!--<h3 class="tit center">차대리 이벤트</h3>-->
+      <!--<div class="center ban-left" style="background: #2d3f4d;">-->
+        <!--<a href="http://blog.naver.com/chadaeli/221013704482" target="_blank" class="ban_link_left"><img src="/static/images/mobile/banner/ban_reserve_m.jpg" alt="" width="300" /></a>-->
+      <!--</div>-->
+      <!--<div class="center ban-left" style="background: #cbe1ee;">-->
+        <!--<a href="http://blog.naver.com/chadaeli/220994481047" target="_blank" class="ban_link_left"><img src="/static/images/mobile/banner/ban_free_m.jpg" alt="" width="300" /></a>-->
+      <!--</div>-->
+      <!--<div class="center ban-left" style="background: #ffeb01;">-->
+        <!--<a href="http://blog.naver.com/chadaeli/220994483823" target="_blank" class="ban_link_left"><img src="/static/images/mobile/banner/ban_open_m.jpg" alt="" width="300" /></a>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <div class="left_customer clearfix">
+      <div class="cha-call center">
+        <a href="tel:1600-8218"><img src="/static/images/mobile/btn-left-tel.gif" width="150" alt="1600-8218" /></a>
+      </div>
+      <div class="img-cha center">
+        <img src="/static/images/mobile/img_left_bg_cha.gif" alt="" width="150" />
+      </div>
+      <div class="clearfix"></div>
+
+      <h3 class="tit center">실시간 채팅 및 문의</h3>
+      <div class="center" style="background: #2b3d64;padding: 7px 0;">
+        <a href="/request"><img src="/static/images/mobile/ico_mail.gif" alt="문의하기" width="35" /></a>&nbsp;&nbsp;
+        <a href="http://plus.kakao.com/home/ov0qv67l" target="_blank"><img src="/static/images/mobile/ico_plus.gif" alt="플러스친구" width="35" /></a>&nbsp;&nbsp;
+        <a href="https://talk.naver.com/ct/wc4ktq" target="_blank"><img src="/static/images/mobile/ico_taktak.gif" alt="톡톡" width="35" /></a>
+      </div>
+
+      <h3 class="tit center" style="margin: 20px 0 10px 0;">홍보채널</h3>
+      <div class="center" style="background: #2b3d64;padding: 7px 0;">
+        <a href="https://www.facebook.com/chadaeli7/" target="_blank"><img src="/static/images/mobile/ico_fb.gif" alt="페이스북" width="35" /></a>&nbsp;
+        <a href="https://www.instagram.com/chadaeli_official/" target="_blank"><img src="/static/images/mobile/ico_instagram.gif" alt="인스타그램" width="35" /></a>&nbsp;
+        <a href="https://www.youtube.com/channel/UCSqBhJZa71pUHwIuEj8rjMQ" target="_blank"><img src="/static/images/mobile/ico_youtube.gif" alt="유튜브" width="35" /></a>&nbsp;
+        <a href="https://twitter.com/chadaeli7" target="_blank"><img src="/static/images/mobile/ico_twit.gif" alt="트위터" width="35" /></a>&nbsp;
+        <a href="http://cafe.naver.com/chadaeli/" target="_blank"><img src="/static/images/mobile/ico_cafe.gif" alt="네이버까페" width="35" /></a>&nbsp;
+        <a href="http://blog.naver.com/chadaeli/" target="_blank"><img src="/static/images/mobile/ico_blog.gif" alt="네이버블로그" width="35" /></a>
+      </div>
+    </div>
+  </div>
+</div>
