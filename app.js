@@ -19,7 +19,7 @@ app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 
 // uncomment after placing your favicon in /public
-app.use(favicon(path.join(__dirname, 'public', 'favicon.png')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.gif')));
 
 
 // var expiryDate = new Date( Date.now() + 60 * 60 * 1000 ); // 1 hour
@@ -29,7 +29,7 @@ app.use(cookieSession({
   cookie: {
     secure: false
     , httpOnly: false
-    , domain: 'chadaeli.com'
+    , domain: 'jcorporationtech.com'
     // expires: expiryDate // 지속적 쿠키에 대한 만기 일짜를 설정, 쿠키에 중요한 정보가 없으므로 로그인을 일단 유지하게 한다.
   }
 }));

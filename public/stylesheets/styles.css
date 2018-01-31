@@ -1,3 +1,7 @@
+.navbar-custom .nav li > a {
+  font-size: 14px; }
 
+.navbar-custom .nav li > a:hover {
+  font-weight: bold; }
 
 /*# sourceMappingURL=styles.css.map */
