@@ -4,4 +4,10 @@
 .navbar-custom .nav li > a:hover {
   font-weight: bold; }
 
+.btn_chat {
+  position: fixed;
+  bottom: 25px;
+  right: 10px;
+  z-index: 999; }
+
 /*# sourceMappingURL=styles.css.map */
