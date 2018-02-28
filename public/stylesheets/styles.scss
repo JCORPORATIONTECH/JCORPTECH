@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import '../assets/css/style.min.css';
+
 .navbar-custom .nav li > a{
   font-size: 16px;
 }
@@ -10,7 +12,15 @@
 
 .btn_chat{
   position: fixed;
-  bottom: 25px;
+  bottom: 10px;
   right: 10px;
   z-index: 999;
 }
+
+@keyframes blink {
+  0% {opacity: 0}
+  20%{opacity: 0.5}
+  50% {opacity: 1}
+}
+
+.blink{animation: blink 1.5s infinite;}

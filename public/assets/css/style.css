@@ -564,9 +564,10 @@ a,
 .scroll-up {
   position: fixed;
   display: none;
-  bottom: 7px;
-  right: 7px;
+  bottom: 10px;
+  right: 50%;
   z-index: 999;
+  margin-right: -15px;
 }
 
 .scroll-up a {

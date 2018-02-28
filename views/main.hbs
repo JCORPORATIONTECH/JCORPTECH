@@ -613,5 +613,7 @@
         </footer>
     </div>
     <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
-	<a href="http://pf.kakao.com/_xjBDxgxl" class="btn_chat" target="_blank"><img src="/static/images/ico_chat.png" alt="채팅문의하기" width="80" /></a>
+	<a href="http://pf.kakao.com/_xjBDxgxl" class="btn_chat blink" target="_blank"><img src="/static/images/ico_chat.png" alt="채팅문의하기" {{#if (isEquals isMobile 1)}}width="90"{{else}}width="120"{{/if}} />
+
+	</a>
 </main>
