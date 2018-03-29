@@ -34,16 +34,16 @@ var httpToHttps = function (req, res, next) {
 };
 
 
-//
+// TODO 메인 페이지
 router.get('/', (req, res) => {
 
 	var task = null;
 	
 	async.parallel( task, (err, result) => {
 		if(!err){
-			res.render('main', {
+			res.render('v1.1/index', {
 				title : PROJ_TITLE,
-				current_path : 'MAIN'
+				current_path : 'INDEX'
 			});
 		}else{
 			console.error(err);

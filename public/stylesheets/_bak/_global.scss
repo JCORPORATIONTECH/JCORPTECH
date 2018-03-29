@@ -2897,16 +2897,16 @@ hr {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07) !important;
 }
 .pi-bg-main-wood {
-  background: url(../img/bg/wood.jpg) #ffffff;
+  background: url(/static/images/v1.1/bg/wood.jpg) #ffffff;
 }
 .pi-bg-main-wood-dark {
-  background: url(../img/bg/wood-dark.jpg) #ffffff;
+  background: url(/static/images/v1.1/bg/wood-dark.jpg) #ffffff;
 }
 .pi-bg-main-wood-light {
-  background: url(../img/bg/wood-light.jpg) #ffffff;
+  background: url(/static/images/v1.1/bg/wood-light.jpg) #ffffff;
 }
 .pi-bg-main-embossed-dark {
-  background: url(../img/bg/embossed-dark.jpg) #ffffff;
+  background: url(/static/images/v1.1/bg/embossed-dark.jpg) #ffffff;
 }
 .pi-hide-excess {
   overflow: hidden;
@@ -6084,7 +6084,7 @@ iframe[src="about:blank"] {
   border-radius: 50%;
 }
 .pi-news-date {
-  background: url("../img/news-date.png") no-repeat;
+  background: url("/static/images/v1.1/news-date.png") no-repeat;
   color: #2e343c;
   float: left;
   font-size: 22px;
