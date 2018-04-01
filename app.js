@@ -50,7 +50,8 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/static', express.static(__dirname + '/public'));
 
 
-global.PROJ_TITLE = '제이코퍼레이션';
+//global.PROJ_TITLE = '제이코퍼레이션';
+global.PROJ_TITLE = '제이텍(JTECH)';
 
 // app.use((req, res, next) => {
 // 	res.locals.version = '1.0.0';
@@ -62,7 +63,7 @@ global.PROJ_TITLE = '제이코퍼레이션';
 const isMobile = require('is-mobile');
 
 app.use((req, res, next) => {
-	res.locals.version  = '2.0.0';
+	res.locals.version  = '1.0.1';
 	res.locals.isMobile = (isMobile(req) == 1) ? 1 : 0;
 	
 	if(req.headers['x-forwarded-port'] === '443'){
