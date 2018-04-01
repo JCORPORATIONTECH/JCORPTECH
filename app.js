@@ -50,8 +50,8 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/static', express.static(__dirname + '/public'));
 
 
-//global.PROJ_TITLE = '제이코퍼레이션';
-global.PROJ_TITLE = '제이텍(JTECH)';
+global.PROJ_TITLE = '제이코퍼레이션(JTECH)';
+// global.PROJ_TITLE = '제이텍(JTECH)';
 
 // app.use((req, res, next) => {
 // 	res.locals.version = '1.0.0';
