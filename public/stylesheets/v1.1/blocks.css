@@ -1895,7 +1895,7 @@ div:hover > .btn-reverse-bg-green {
   background-color: #fff;
   box-shadow: 20px 0 60px 0 rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  padding: 60px;
+  padding: 60px 30px 60px 60px;
   z-index: 5;
   transition: all .3s ease; }
 
